@@ -59,7 +59,7 @@ import Projects from "@components/Projects";
 
 export default function HomePage() {
   return (
-    <main className="home">
+    <div className="home">
       <div className="container drainage__wrapper">
         <div className="container drainage">
           <div className="drainage__text">
@@ -198,6 +198,6 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 }
