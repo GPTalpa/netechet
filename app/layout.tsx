@@ -1,7 +1,7 @@
 import "normalize.css";
 import "./globals.scss";
 import Header from "@components/Header";
-// import Footer from "@/components/Footer/Footer";
+import Footer from "@components/Footer";
 import Script from "next/script";
 import { balkara, manrope } from "./fonts";
 export default function RootLayout({
@@ -24,7 +24,7 @@ export default function RootLayout({
       <body>
         <Header />
         <main>{children}</main>
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );

@@ -9,12 +9,18 @@ interface IButton {
   isBlack: boolean;
   className?: string;
   isHeader?: boolean;
+  isServices?: boolean;
 }
 
-export default function Button({ text, isBlack, isHeader }: IButton) {
+export default function Button({
+  text,
+  isBlack,
+  isHeader,
+  isServices,
+}: IButton) {
   return (
     <button
-      className={`btn ${isBlack ? "btn--black" : ""} ${isHeader ? "btn--header" : ""}`}
+      className={`btn ${isBlack ? "btn--black" : ""} ${isHeader ? "btn--header" : ""} ${isServices ? "btn--services" : ""}`}
     >
       {text}
     </button>

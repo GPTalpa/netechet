@@ -1,0 +1,134 @@
+.footer {
+  padding: 43px 100px 49px;
+  display: flex;
+  justify-content: space-between;
+  background: url(/images/footer-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 270px;
+  overflow: hidden;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+
+  &__left {
+    max-width: 307px;
+  }
+
+  &__right {
+    max-width: 408px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    button {
+      margin-bottom: 46px;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: 46vw;
+      max-width: 635px;
+      aspect-ratio: 635 / 731;
+
+      background-image: url("/images/drainage-hero.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__text {
+    max-width: 689px;
+    width: 100%;
+
+    p {
+      font-size: 18px;
+      font-weight: 300;
+      margin-bottom: 46px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    gap: 56px;
+    flex-direction: column;
+    margin-bottom: 67px;
+
+    h2 {
+      font-size: 56px;
+      font-weight: 400;
+      color: white;
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 67px;
+    ul {
+      padding: 0;
+      list-style: none;
+      font-size: 15px;
+      font-weight: 300;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      &:first-child {
+        font-size: 18px;
+        gap: 14px;
+      }
+    }
+  }
+
+  &__telegram {
+    margin-bottom: 77px;
+    a {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      justify-content: flex-start;
+      gap: 13px;
+    }
+  }
+
+  &__time {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    margin-bottom: 36px;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 36px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: 300;
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-end;
+    a {
+      margin-bottom: 11px;
+    }
+  }
+}
