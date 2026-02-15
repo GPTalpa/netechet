@@ -4,6 +4,9 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import Button from "@components/Button";
 import Projects from "@components/Projects";
+
+import Cta from "@components/Cta";
+import Link from "next/link";
 // import { homePageMeta } from "./head";
 
 // const Button = dynamic(() => import("@/components/Button/Button"), {
@@ -58,7 +61,56 @@ import Projects from "@components/Projects";
 // };
 
 export default function Contacts() {
-  return <div className="contacts">
-    
-  </div>;
+  return (
+    <div className="contacts">
+      <div className="contacts__content">
+        <Image
+          src="/images/image_20.png"
+          alt="Избушка"
+          width={1536}
+          height={1348}
+        />
+        <div className="contacts__block">
+          <div className="contacts__block__left">
+            <h1>Контакты</h1>
+            <address>
+              <p className="contacts__company-name">Компания «Не течет»</p>
+              <p>ИП Фамилия И.О.</p>
+              <p>г. Москва</p>
+              <p>
+                <span style={{ fontWeight: 700 }}>Телефон: </span>
+                <Link href="tel: +79252852955"> +7 (925) 285 - 29 - 55</Link>
+              </p>
+              <p>
+                <span style={{ fontWeight: 700 }}>Время работы: </span>
+                <span>
+                  с <time dateTime="10:00+03:00">10:00</time> до{" "}
+                  <time dateTime="19:00+03:00">19:00</time> МСК
+                </span>
+              </p>
+              <p style={{ fontWeight: 700 }}>ИНН</p>
+              <p style={{ fontWeight: 700 }}>ОГРН</p>
+              <Link href="#">
+                <Image
+                  src="/icons/tg-red.svg"
+                  alt="Логотип большой"
+                  width={46}
+                  height={46}
+                />
+              </Link>
+            </address>
+          </div>
+          <div className="contacts__block__right">
+            <Image
+              src="/images/logo-big.png"
+              alt="Логотип большой"
+              width={402}
+              height={402}
+            />
+          </div>
+        </div>
+      </div>
+      <Cta />
+    </div>
+  );
 }
