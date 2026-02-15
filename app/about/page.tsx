@@ -4,6 +4,7 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import Button from "@components/Button";
 import Projects from "@components/Projects";
+import Cta from "@components/Cta";
 // import { homePageMeta } from "./head";
 
 // const Button = dynamic(() => import("@/components/Button/Button"), {
@@ -57,7 +58,7 @@ import Projects from "@components/Projects";
 //   },
 // };
 
-export default function HomePage() {
+export default function About() {
   return (
     <div className="about">
       <div className="container about-company">
@@ -171,21 +172,7 @@ export default function HomePage() {
           <Image src="/images/dec2-big.png" alt="" width={194} height={412} />
         </div>
       </div>
-      <div className="container about-cta__wrapper">
-        <div className="container about-cta">
-          <div className="about-cta__text">
-            <div className="about-cta__header">
-              <h2>Защитите свой участок сейчас!</h2>
-            </div>
-
-            <p>
-              Наш менеджер свяжется с Вами для уточнения
-              <br /> даты и времени выезда инженера на участок!
-            </p>
-            <Button text="Получить расчет стоимости" isBlack={false} />
-          </div>
-        </div>
-      </div>
+      <Cta />
       <div className="container cert">
         <h2>сертификаты</h2>
         <div className="cert__content">
