@@ -11,6 +11,10 @@ body {
   margin: 0 auto;
 }
 
+main {
+  min-height: 40vh;
+}
+
 h1 {
   font-family: var(--font-balkara);
   font-size: 62px;
@@ -54,4 +58,14 @@ button {
 
 div {
   box-sizing: border-box;
+}
+
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  img {
+    pointer-events: none;
+  }
 }
