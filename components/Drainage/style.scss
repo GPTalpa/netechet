@@ -1,0 +1,92 @@
+.drainage {
+  padding: 87px 41px;
+  display: flex;
+  justify-content: flex-end;
+  background: url(/images/drainage-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 86px;
+  border-radius: 30px;
+  overflow: hidden;
+
+  &__wrapper {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 66px;
+
+      width: 40vw;
+      max-width: 635px;
+      aspect-ratio: 635 / 731;
+
+      background-image: url("/images/drainage-hero.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &--2 {
+      height: -webkit-fill-available;
+
+      &::after {
+        background-image: url("/images/drainage-hero--2.png");
+        width: 25vw;
+        left: 20px;
+      }
+    }
+  }
+
+  &__text {
+    max-width: 689px;
+    width: 100%;
+
+    p {
+      font-size: 18px;
+      font-weight: 300;
+      margin-bottom: 46px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    gap: 22px;
+    flex-direction: column;
+    margin-bottom: 68px;
+  }
+
+  &--2 {
+    margin-top: 0;
+    height: 100%;
+    padding-right: 49px;
+
+    .drainage {
+      &__text {
+        max-width: 384px;
+        text-align: right;
+      }
+
+      &__header {
+        gap: 14px;
+
+        p,
+        h3 {
+          font-family: var(--font-balkara);
+        }
+
+        p {
+          font-size: 36px;
+          margin-bottom: 0;
+        }
+
+        h3 {
+          color: rgba(225, 208, 168, 1);
+          font-size: 56px;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

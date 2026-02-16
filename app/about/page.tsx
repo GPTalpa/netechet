@@ -169,7 +169,12 @@ export default function About() {
           </div>
         </div>
         <div className="about-projects--dec">
-          <Image src="/images/dec2-big.png" alt="" width={194} height={412} />
+          <Image
+            src="/images/dec2-half-big.png"
+            alt=""
+            width={194}
+            height={412}
+          />
         </div>
       </div>
       <Cta />

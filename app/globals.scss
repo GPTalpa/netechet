@@ -9,6 +9,7 @@ body {
   font-family: var(--font-manrope);
   max-width: 1600px;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 main {
@@ -29,6 +30,10 @@ h2 {
   line-height: 42px;
   font-weight: 400;
   color: rgba(225, 208, 168, 1);
+  margin: 0;
+}
+
+h3 {
   margin: 0;
 }
 
@@ -68,4 +73,11 @@ div {
   img {
     pointer-events: none;
   }
+}
+
+.full-bleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  max-width: none;
 }

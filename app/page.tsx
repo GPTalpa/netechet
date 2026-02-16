@@ -4,6 +4,7 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import Button from "@components/Button";
 import Projects from "@components/Projects";
+import Drainage from "@components/Drainage";
 // import { homePageMeta } from "./head";
 
 // const Button = dynamic(() => import("@/components/Button/Button"), {
@@ -60,26 +61,7 @@ import Projects from "@components/Projects";
 export default function HomePage() {
   return (
     <div className="home">
-      <div className="container drainage__wrapper">
-        <div className="container drainage">
-          <div className="drainage__text">
-            <div className="drainage__header">
-              {" "}
-              <h1>Монтаж дренажных систем на участке</h1>
-              <h2>
-                за 2-3 дня в Москве и МО <br /> под ключ
-              </h2>
-            </div>
-
-            <p>
-              Оставь заявку и{" "}
-              <span style={{ fontWeight: 700 }}>получи скидку 10%</span> до
-              конца <br /> месяца на монтаж
-            </p>
-            <Button text="Получить расчет стоимости" isBlack={false} />
-          </div>
-        </div>
-      </div>
+      <Drainage />
       <Projects />
       <div className="container services">
         <h2>услуги</h2>
