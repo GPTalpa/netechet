@@ -247,4 +247,541 @@
       pointer-events: none;
     }
   }
+
+  .drainage-materials {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    margin-top: 120px;
+
+    &__first-line {
+      display: flex;
+      justify-content: space-between;
+
+      &__left {
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+
+        h2 {
+          color: white;
+          font-size: 80px;
+          line-height: 100%;
+        }
+
+        &--description {
+          padding-top: 17px;
+          padding-left: 27px;
+          position: relative;
+          &::after {
+            content: url("/icons/corn-left-top.svg");
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+          p {
+            font-size: 16px;
+            font-weight: 300;
+          }
+        }
+      }
+
+      &__right {
+        display: flex;
+        gap: 16px;
+      }
+    }
+
+    &__second-line {
+      display: flex;
+      gap: 16px;
+      height: 396px;
+    }
+
+    &__item-wrapper {
+      height: 100%;
+
+      &--with-dec {
+        height: 70%;
+      }
+    }
+
+    &__item {
+      height: 100%;
+      width: 100%;
+      border-radius: 20px;
+      background: rgba(237, 231, 217, 1);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      align-content: center;
+      gap: 16px;
+      justify-content: center;
+      color: rgba(15, 15, 15, 1);
+      padding-left: 46px;
+
+      &--accent {
+        color: white;
+        background: rgba(143, 33, 45, 1);
+        position: relative;
+        flex-direction: row;
+        gap: 7px;
+        align-items: center;
+        &::after {
+          content: "";
+          inset: 0;
+          background: url("/images/bg_container.png");
+          position: absolute;
+          pointer-events: none;
+        }
+
+        div {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+        }
+      }
+
+      &--bg-dec {
+        position: relative;
+
+        &::after {
+          content: "";
+          inset: 0;
+          background: url("/images/bg-transition.png");
+          position: absolute;
+          pointer-events: none;
+          background-position: bottom;
+          background-repeat: no-repeat;
+        }
+      }
+
+      &--title {
+        font-family: var(--font-balkara);
+        font-size: 36px;
+      }
+
+      &--description {
+        font-size: 16px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .drainage-why-us {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 180px;
+
+    .--dec-image {
+      margin-top: -100px;
+    }
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+
+      h2 {
+        color: white;
+        font-size: 66px;
+        line-height: 65px;
+      }
+
+      &__description {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+
+        p {
+          font-size: 16px;
+          text-align: center;
+        }
+
+        .big {
+          font-family: var(--font-balkara);
+          font-size: 100px;
+        }
+      }
+    }
+
+    &__content {
+      margin-top: -620px;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr 1fr;
+      height: 410px;
+      gap: 24px;
+    }
+
+    &__column {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      &--1 {
+        align-items: flex-end;
+        justify-content: flex-end;
+      }
+
+      &--2 {
+        justify-content: center;
+
+        .drainage-without__item--images {
+          img {
+            flex: 1;
+          }
+        }
+      }
+      &--3 {
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+    }
+
+    &__block {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      padding: 36px 26px;
+      background: rgba(237, 231, 217, 1);
+      color: rgba(0, 0, 0, 1);
+      border-radius: 20px;
+
+      &--title {
+        font-size: 20px;
+        line-height: 26px;
+      }
+
+      &--description {
+        font-size: 15px;
+        font-weight: 300;
+      }
+
+      &--1,
+      &--5 {
+        background: rgba(143, 33, 45, 1);
+        color: rgba(255, 255, 255, 1);
+      }
+
+      &--3 {
+        box-shadow: 0px 4px 20px 0px rgba(7, 5, 24, 0.05);
+        backdrop-filter: blur(9.832073211669922px);
+      }
+      &--1 {
+        max-width: 85%;
+        position: relative;
+
+        &::after {
+          content: url("/images/dec-lock.png");
+          position: absolute;
+          top: 31px;
+          right: 20px;
+        }
+      }
+
+      &--2 {
+        max-width: 75%;
+        position: relative;
+
+        &::after {
+          content: url("/images/dec-horse.png");
+          position: absolute;
+          right: 0;
+          bottom: 0;
+        }
+
+        .drainage-why-us__block--title {
+          max-width: 60%;
+        }
+        .drainage-why-us__block--description {
+          max-width: 60%;
+        }
+      }
+
+      &--4 {
+        max-width: 83%;
+        position: relative;
+
+        .drainage-why-us__block--title {
+          max-width: 60%;
+        }
+        .drainage-why-us__block--description {
+          max-width: 60%;
+        }
+
+        &::after {
+          content: url("/images/dec-paper.png");
+          position: absolute;
+          top: 31px;
+          right: -20px;
+        }
+      }
+      &--5 {
+        max-width: 70%;
+      }
+    }
+  }
+
+  .drainage-how-we-work {
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+    margin-top: 120px;
+    position: relative;
+
+    h2 {
+      font-size: 80px;
+      color: white;
+      line-height: 100%;
+    }
+
+    &__content {
+      display: flex;
+      gap: clamp(10px, 70px, 70px);
+      z-index: 2;
+    }
+
+    &__block {
+      display: flex;
+      align-items: center;
+      gap: clamp(10px, 26px, 26px);
+
+      &--number {
+        font-family: var(--font-balkara);
+        font-size: 75px;
+      }
+
+      &__header {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      &--title {
+        font-size: 20px;
+        line-height: 26px;
+        font-weight: 700;
+      }
+
+      &--description {
+        font-size: 16px;
+        font-weight: 300;
+      }
+
+      &--accent {
+        background: rgba(143, 33, 45, 1);
+        position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        &::after {
+          content: "";
+          inset: 0;
+          background: url("/images/bg_container.png");
+          position: absolute;
+          pointer-events: none;
+        }
+
+        &__content {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding-left: 46px;
+          padding-right: 92px;
+          position: relative;
+          height: 100%;
+          justify-content: center;
+          gap: 48px;
+          overflow: hidden;
+
+          &__header {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+          }
+
+          &::after {
+            content: "1";
+            position: absolute;
+            top: 36px;
+            right: 36px;
+            font-size: 55px;
+            font-family: var(--font-balkara);
+          }
+
+          &::before {
+            content: url("/images/dec-phone.png");
+            position: absolute;
+            right: -2px;
+            bottom: -7px;
+          }
+        }
+
+        &--title {
+          font-size: 26px;
+          font-weight: 700;
+        }
+
+        &--description {
+          font-size: 16px;
+          font-weight: 300;
+        }
+      }
+    }
+
+    &__wrapper-blocks {
+      display: flex;
+      gap: clamp(10px, 163px, 163px);
+      padding: 14px 0;
+    }
+
+    &__column {
+      max-width: 311px;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 663px;
+      height: 763px;
+      right: 0;
+      background: rgba(143, 33, 45, 1);
+      border-radius: 50%;
+      opacity: 0.5;
+      filter: blur(500px);
+      z-index: 0;
+    }
+  }
+
+  .drainage-reviews {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+
+    &__text {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 140px;
+
+      h2 {
+        color: rgba(255, 255, 255, 1);
+        font-size: 66px;
+        line-height: 100%;
+        height: 100%;
+      }
+    }
+
+    &--dec {
+      position: absolute;
+      left: 100%;
+      transform: translateX(-100%);
+    }
+
+    .video {
+      width: 404px;
+      height: 575px;
+      background: grey;
+    }
+  }
+
+  .drainage-faq {
+    display: flex;
+    gap: clamp(10px, 196px, 196px);
+    flex-direction: row-reverse;
+    margin-top: 120px;
+    justify-content: space-between;
+
+    &__header {
+      display: flex;
+      flex-direction: column;
+      gap: 43px;
+      align-items: flex-start;
+      justify-content: center;
+      max-width: 570px;
+
+      &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 68px;
+
+        h2 {
+          font-size: 56px;
+          line-height: 100%;
+          color: rgba(255, 255, 255, 1);
+        }
+
+        p {
+          font-size: 16px;
+          font-weight: 400;
+        }
+      }
+    }
+
+    .faq {
+      display: flex;
+      gap: 112px;
+      width: 100%;
+
+      &_right {
+        flex: 1;
+        max-width: 593px;
+      }
+
+      &__item {
+        background: transparent;
+        margin-bottom: 12px;
+        border-bottom: 1px solid rgba(40, 39, 38, 1);
+        &--question {
+          font-size: 20px;
+          font-weight: 600;
+          flex: 1;
+        }
+
+        .faq__chev {
+          transition: transform 0.6s;
+        }
+
+        &[open] {
+          .faq {
+            &__content {
+              max-height: 1000px;
+            }
+
+            &__chev {
+              transform: rotate(540deg);
+            }
+          }
+        }
+      }
+      &__summary {
+        display: flex;
+        justify-content: flex-start;
+        padding: 30px 0;
+        cursor: pointer;
+        align-items: center;
+        gap: 74px;
+
+        &::-webkit-details-marker {
+          display: none;
+        }
+      }
+      &__content {
+        max-height: 0;
+        overflow: hidden;
+        animation: open 0.6s ease;
+        color: rgba(184, 184, 184, 1);
+        font-size: 15px;
+        max-width: 410px;
+      }
+
+      .mobile {
+        display: none;
+      }
+    }
+  }
 }

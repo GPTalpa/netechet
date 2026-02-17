@@ -1,0 +1,31 @@
+.cert {
+  margin-top: 120px;
+
+  h2 {
+    font-size: 56px;
+    color: rgba(255, 255, 255, 1);
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 46px;
+  }
+
+  &__item {
+    padding: 26px;
+    position: relative;
+    &::after {
+      content: url("/icons/corn-right.svg");
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    &::before {
+      position: absolute;
+      content: url("/icons/corn-left.svg");
+      bottom: 0;
+      left: 0;
+    }
+  }
+}

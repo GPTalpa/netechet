@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import Button from "@components/Button";
 import Projects from "@components/Projects";
 import Cta from "@components/Cta";
+import Certificats from "@components/Certificats";
 // import { homePageMeta } from "./head";
 
 // const Button = dynamic(() => import("@/components/Button/Button"), {
@@ -178,35 +179,7 @@ export default function About() {
         </div>
       </div>
       <Cta />
-      <div className="container cert">
-        <h2>сертификаты</h2>
-        <div className="cert__content">
-          <div className="cert__item">
-            <Image
-              src="/images/cert1.png"
-              alt="Сертификат"
-              width={394}
-              height={557}
-            />
-          </div>
-          <div className="cert__item">
-            <Image
-              src="/images/cert2.png"
-              alt="Сертификат"
-              width={394}
-              height={557}
-            />
-          </div>
-          <div className="cert__item">
-            <Image
-              src="/images/cert3.png"
-              alt="Сертификат"
-              width={394}
-              height={557}
-            />
-          </div>
-        </div>
-      </div>
+      <Certificats />
     </div>
   );
 }
