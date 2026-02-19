@@ -44,6 +44,7 @@ export default function Projects() {
             breakpoints={{
               0: {
                 slidesPerView: 1.3,
+                spaceBetween: 16,
               },
               768: {
                 slidesPerView: 2.7,

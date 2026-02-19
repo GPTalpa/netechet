@@ -104,12 +104,13 @@
   .drainage {
     padding: 46px 16px;
     padding-bottom: 360px;
+    margin-top: 30px;
 
     &__wrapper {
       padding: 0 20px;
 
       &::after {
-        width: 60%;
+        width: 77vw;
         left: 50%;
         transform: translateX(-50%);
       }

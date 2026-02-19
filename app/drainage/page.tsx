@@ -603,10 +603,10 @@ export default function DrainagePage() {
                     <path
                       d="M3.39998 12.542L8.83331 7.10866C9.47498 6.46699 10.525 6.46699 11.1666 7.10866L16.6 12.542"
                       stroke="white"
-                      stroke-width="1.5"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="1.5"
+                      strokeMiterlimit="10"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </svg>
                 </span>
@@ -634,10 +634,10 @@ export default function DrainagePage() {
                     <path
                       d="M3.39998 12.542L8.83331 7.10866C9.47498 6.46699 10.525 6.46699 11.1666 7.10866L16.6 12.542"
                       stroke="white"
-                      stroke-width="1.5"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="1.5"
+                      strokeMiterlimit="10"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </svg>
                 </span>
@@ -665,10 +665,10 @@ export default function DrainagePage() {
                     <path
                       d="M3.39998 12.542L8.83331 7.10866C9.47498 6.46699 10.525 6.46699 11.1666 7.10866L16.6 12.542"
                       stroke="white"
-                      stroke-width="1.5"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="1.5"
+                      strokeMiterlimit="10"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </svg>
                 </span>
@@ -696,10 +696,10 @@ export default function DrainagePage() {
                     <path
                       d="M3.39998 12.542L8.83331 7.10866C9.47498 6.46699 10.525 6.46699 11.1666 7.10866L16.6 12.542"
                       stroke="white"
-                      stroke-width="1.5"
-                      stroke-miterlimit="10"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="1.5"
+                      strokeMiterlimit="10"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </svg>
                 </span>

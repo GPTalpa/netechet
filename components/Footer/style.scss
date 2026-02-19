@@ -149,6 +149,16 @@
     padding: 46px 52px 300px 47px;
     flex-direction: column;
 
+    background: rgba(143, 33, 45, 1);
+
+    &::after {
+      content: "";
+      inset: 0;
+      background: url(/images/bg_container.png);
+      position: absolute;
+      pointer-events: none;
+    }
+
     &__left {
       max-width: 100%;
     }
@@ -222,7 +232,7 @@
 
     &__wrapper {
       &::after {
-        width: 56vw;
+        width: 70vw;
       }
     }
   }
