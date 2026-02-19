@@ -31,6 +31,10 @@
   &__image {
     position: relative;
 
+    &--mobile {
+      display: none;
+    }
+
     &__text {
       position: absolute;
       left: 46px;
@@ -42,6 +46,9 @@
       &--title {
         font-weight: 700;
         font-size: 22px;
+        br {
+          display: block;
+        }
       }
 
       &--description {
@@ -143,6 +150,106 @@
     &--description {
       font-size: 15px;
       font-weight: 300;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about-company {
+    padding-left: 20px;
+    padding-right: 20px;
+    flex-direction: column-reverse;
+
+    &__right {
+      h1 {
+        font-size: 48px;
+        line-height: 62px;
+        margin-bottom: 36px;
+      }
+
+      &__text {
+        margin-top: 26px;
+        font-size: 15px;
+        gap: 25px;
+      }
+
+      &--decor {
+        justify-content: center;
+        gap: 26px;
+      }
+    }
+
+    &__image {
+      position: relative;
+      display: none;
+
+      &--mobile {
+        position: relative;
+        display: block;
+        border-radius: 20px;
+        overflow: hidden;
+
+        img {
+          height: auto;
+          border-radius: 20px;
+          width: 100%;
+        }
+      }
+
+      &__text {
+        left: 28px;
+        bottom: 28px;
+      }
+    }
+  }
+
+  .about-info {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+
+    &__item {
+      padding: 46px 28px;
+
+      &--title {
+        font-size: 28px;
+
+        br {
+          display: block;
+        }
+      }
+
+      &--description {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .about-projects {
+    position: relative;
+    padding-left: 20px;
+
+    &__text {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 36px;
+
+      h2 {
+        font-size: 15px;
+        line-height: 100%;
+        gap: 14px;
+        .h2-dec {
+          font-size: 120px;
+          line-height: 120px;
+        }
+      }
+    }
+
+    &--dec {
+      top: 260px;
+    }
+
+    &__info-item {
+      align-items: flex-start;
     }
   }
 }

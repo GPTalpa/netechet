@@ -83,6 +83,22 @@ export default function About() {
         </div>
         <div className="about-company__right">
           <h1>о компании</h1>
+          <div className="about-company__image--mobile">
+            <Image
+              src="/images/image_21--mobile.png"
+              alt="Директор компании «Не течет» Аникеев Сергей"
+              width={335}
+              height={462}
+            />
+            <div className="about-company__image__text">
+              <p className="about-company__image__text--title">
+                Аникеев Сергей
+              </p>
+              <p className="about-company__image__text--description">
+                Директор компании «Не течет»
+              </p>
+            </div>
+          </div>
           <div className="about-company__right__text">
             <p>
               <span style={{ fontWeight: 700 }}>
@@ -118,7 +134,9 @@ export default function About() {
       </div>
       <div className="container about-info">
         <div className="about-info__item about-info__item--accent">
-          <p className="about-info__item--title">Наш фундамент — это люди.</p>
+          <p className="about-info__item--title">
+            Наш фундамент <br />— это люди.
+          </p>
           <p className="about-info__item--description">
             {" "}
             В нашей команде работают опытные специалисты, которые знают своё

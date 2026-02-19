@@ -96,6 +96,7 @@
     }
 
     &__right {
+      gap: clamp(32px, 2vw, 68px);
       address {
         gap: 4px;
 

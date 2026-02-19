@@ -53,3 +53,36 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .about-cta {
+    padding: 60px 26px 289px;
+    &__wrapper {
+      padding: 0 20px;
+
+      &::after {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 61vw;
+      }
+    }
+
+    &__header {
+      margin-bottom: 46px;
+      h2 {
+        font-size: 28px;
+        line-height: 100%;
+        text-align: center;
+      }
+    }
+
+    &__text {
+      font-size: 15px;
+      text-align: center;
+    }
+
+    .btn {
+      font-size: 15px;
+    }
+  }
+}

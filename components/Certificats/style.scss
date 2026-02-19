@@ -30,3 +30,25 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .cert {
+    padding-left: 20px;
+    &__content {
+      overflow-x: scroll;
+      gap: 9px;
+      padding-bottom: 5px;
+    }
+    &__item {
+      padding: 13px;
+      width: 80vw;
+      height: 100%;
+      padding-bottom: 17px;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
