@@ -18,7 +18,20 @@ export default function Footer() {
           <div className="footer__text">
             <div className="footer__header">
               {" "}
-              <h2>не течет</h2>
+              <div className="footer__header--with-logo">
+                <h2>не течет</h2>
+                <Link href="/">
+                  <Image
+                    src="/icons/logo.svg"
+                    width={47}
+                    height={47}
+                    alt="Логотип"
+                    fetchPriority="high"
+                    loading="eager"
+                    className="footer__header--logo"
+                  ></Image>
+                </Link>
+              </div>
               <nav className="footer__navigation">
                 <ul>
                   <li>
@@ -102,6 +115,20 @@ export default function Footer() {
               Мы в Телеграм!
             </Link>
           </address>
+          <ul className="footer__navigation--mobile">
+            <li>
+              <Link href="#">Политика конфиденциальности</Link>
+            </li>
+            <li>
+              <Link href="#">Политика обработки персональных данных</Link>
+            </li>
+            <li>
+              <Link href="#">Согласие на обработку файлов cookies</Link>
+            </li>
+            <li>
+              <Link href="#">Управление файлами cookies</Link>
+            </li>
+          </ul>
           <div className="footer__copyright">
             <Link href="/">
               <Image

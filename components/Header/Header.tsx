@@ -89,6 +89,11 @@ export default function Header() {
           </Link>
           <Button isHeader={true} text="Заказать звонок" isBlack={false} />
         </div>
+        <div className="header__burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </header>
   );

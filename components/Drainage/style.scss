@@ -90,3 +90,47 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .drainage {
+    padding: 46px 16px;
+    padding-bottom: 360px;
+
+    &__wrapper {
+      padding: 0 20px;
+
+      &::after {
+        width: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &__header {
+      gap: 8px;
+
+      h1,
+      h2 {
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 20px;
+        line-height: 26px;
+      }
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      p {
+        text-align: center;
+        max-width: 260px;
+        margin: 0 auto;
+        margin-bottom: 36px;
+      }
+    }
+  }
+}

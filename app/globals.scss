@@ -81,3 +81,14 @@ div {
   margin-right: calc(50% - 50vw);
   max-width: none;
 }
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 16px;
+  }
+
+  h1 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+}

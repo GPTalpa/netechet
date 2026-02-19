@@ -41,6 +41,14 @@ export default function Projects() {
             watchSlidesProgress
             observer
             observeParents
+            breakpoints={{
+              0: {
+                slidesPerView: 1.3,
+              },
+              768: {
+                slidesPerView: 2.7,
+              },
+            }}
             onSwiper={(swiper: SwiperType) => {
               setTimeout(() => {
                 if (
