@@ -1,6 +1,10 @@
 .contacts {
   margin-top: 46px;
 
+  .logo-mobile {
+    display: none;
+  }
+
   &__content {
     position: relative;
   }
@@ -49,5 +53,73 @@
   &__company-name {
     font-size: 36px !important;
     font-weight: 700;
+  }
+
+  &__telegram {
+    p {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts {
+    .logo-mobile {
+      display: block;
+    }
+    &__content {
+      max-width: 100%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: -150px;
+
+      &__decorative-image {
+        width: 200%;
+        height: 100%;
+      }
+    }
+
+    &__block {
+      width: 90vw;
+      padding: 36px 30px;
+      left: auto;
+      right: auto;
+
+      &__left {
+        gap: 28px;
+        h1 {
+          font-size: 28px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        address {
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+
+      &__right {
+        display: none;
+      }
+    }
+
+    &__company-name {
+      font-size: 20px !important;
+    }
+
+    &__telegram {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      p {
+        display: block;
+        font-size: 15px;
+      }
+    }
   }
 }

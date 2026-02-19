@@ -66,13 +66,27 @@ export default function Contacts() {
       <div className="contacts__content">
         <Image
           src="/images/image_20.png"
+          className="contacts__content__decorative-image"
           alt="Избушка"
           width={1536}
           height={1348}
         />
         <div className="contacts__block">
           <div className="contacts__block__left">
-            <h1>Контакты</h1>
+            <h1>
+              Контакты{" "}
+              <Link href="/" className="logo-mobile">
+                <Image
+                  src="/icons/logo.svg"
+                  width={47}
+                  height={47}
+                  alt="Логотип"
+                  fetchPriority="high"
+                  loading="eager"
+                  className="footer__header--logo"
+                ></Image>
+              </Link>
+            </h1>
             <address>
               <p className="contacts__company-name">Компания «Не течет»</p>
               <p>ИП Фамилия И.О.</p>
@@ -90,13 +104,9 @@ export default function Contacts() {
               </p>
               <p style={{ fontWeight: 700 }}>ИНН</p>
               <p style={{ fontWeight: 700 }}>ОГРН</p>
-              <Link href="#">
-                <Image
-                  src="/icons/tg-red.svg"
-                  alt="Логотип большой"
-                  width={46}
-                  height={46}
-                />
+              <Link href="#" className="contacts__telegram">
+                <Image src="/icons/tg-red.svg" alt="" width={46} height={46} />
+                <p>Мы в телеграм!</p>
               </Link>
             </address>
           </div>
