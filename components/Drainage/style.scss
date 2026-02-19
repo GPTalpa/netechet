@@ -61,6 +61,14 @@
     margin-top: 0;
     height: 100%;
     padding-right: 49px;
+    background: rgba(143, 33, 45, 1);
+    &::after {
+      content: "";
+      inset: 0;
+      background: url(/images/bg_container.png);
+      position: absolute;
+      pointer-events: none;
+    }
 
     .drainage {
       &__text {
@@ -79,6 +87,7 @@
         p {
           font-size: 36px;
           margin-bottom: 0;
+          text-align: left;
         }
 
         h3 {

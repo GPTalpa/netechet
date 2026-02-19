@@ -95,6 +95,10 @@
       gap: 16px;
       margin-top: 26px;
 
+      &--1 {
+        align-items: stretch;
+      }
+
       &--2 {
         display: grid;
         grid-template-columns: 0.9fr 1fr 1.1fr;
@@ -103,6 +107,14 @@
       &--3 {
         display: grid;
         grid-template-columns: 1.1fr 1fr 0.9fr;
+      }
+
+      &--image {
+        height: auto;
+
+        img {
+          height: 100%;
+        }
       }
     }
 
@@ -375,8 +387,8 @@
 
     margin-top: 180px;
 
-    .--dec-image {
-      margin-top: -100px;
+    &--dec-image {
+      margin-top: -200px;
     }
 
     &__header {
@@ -478,6 +490,10 @@
           position: absolute;
           top: 31px;
           right: 20px;
+        }
+
+        .drainage-why-us__block--title {
+          max-width: 50%;
         }
       }
 
@@ -633,7 +649,6 @@
     &__wrapper-blocks {
       display: flex;
       gap: clamp(10px, 163px, 163px);
-      padding: 14px 0;
     }
 
     &__column {
@@ -694,7 +709,7 @@
     gap: clamp(10px, 196px, 196px);
     flex-direction: row-reverse;
     margin-top: 120px;
-    justify-content: space-between;
+    justify-content: space-around;
 
     &__header {
       display: flex;

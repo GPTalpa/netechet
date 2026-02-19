@@ -277,7 +277,8 @@ export default function DrainagePage() {
             фундамент, дорожки и благоустройство.{" "}
             <span style={{ fontWeight: 700 }}>
               После установки дренажа участок остаётся сухим, растения хорошо
-              приживаются, а дом надежно защищен от сырости и разрушений.
+              приживаются,
+              <br /> а дом надежно защищен от сырости и разрушений.
             </span>
           </p>
         </div>
@@ -424,7 +425,8 @@ export default function DrainagePage() {
           <div className="drainage-why-us__column drainage-why-us__column--2">
             <div className="drainage-why-us__block drainage-why-us__block--3">
               <h3 className="drainage-why-us__block--title">
-                Индивидуальные решения
+                Индивидуальные
+                <br /> решения
               </h3>
               <p className="drainage-why-us__block--description">
                 подбор дренажной системы с учетом типа грунта, уровня грунтовых

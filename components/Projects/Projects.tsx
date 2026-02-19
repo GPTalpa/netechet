@@ -15,7 +15,7 @@ export default function Projects() {
   const prevRef = useRef<HTMLButtonElement>(null);
   const nextRef = useRef<HTMLButtonElement>(null);
   return (
-    <div className="container projects">
+    <div className="projects">
       <div className="projects__left">
         <p className="projects__count">300+</p>
         <p className="projects__text">
@@ -160,7 +160,7 @@ export default function Projects() {
 
                 <div className="projects__slide__text">
                   <p className="projects__slide__text--title">
-                    Бетонная отмостка+ дренажная система
+                    Бетонная отмостка + дренажная система
                   </p>
                   <p className="projects__slide__text--description">
                     МО, Павлово КП «лес и река»

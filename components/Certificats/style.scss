@@ -15,6 +15,7 @@
   &__item {
     padding: 26px;
     position: relative;
+    width: fit-content;
     &::after {
       content: url("/icons/corn-right.svg");
       position: absolute;
