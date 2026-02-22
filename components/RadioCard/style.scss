@@ -1,0 +1,64 @@
+.quiz-radio {
+  position: relative;
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 22px;
+    border: 1px solid rgba(181, 181, 181, 1);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    font-size: 15px;
+    background: transparent;
+    height: 28px;
+  }
+
+  &__check {
+    width: 28px;
+    height: 28px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 1);
+    transition: 0.25s ease;
+  }
+
+  &__icon {
+    width: 16px;
+    height: 16px;
+    stroke: white;
+    opacity: 0;
+    transform: scale(0.6);
+    transition: 0.2s ease;
+  }
+
+  /* ACTIVE STATE */
+
+  &__input:checked + &__label {
+    border-color: #000;
+    background: #f3f3f3;
+  }
+
+  &__input:checked + &__label &__check {
+    background: #000;
+    border-color: #000;
+  }
+
+  &__input:checked + &__label &__icon {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  &__label:hover {
+    border-color: #000;
+  }
+}

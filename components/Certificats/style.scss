@@ -34,6 +34,11 @@
 @media (max-width: 768px) {
   .cert {
     padding-left: 20px;
+    margin-top: 46px;
+    h2 {
+      font-size: 36px;
+    }
+
     &__content {
       overflow-x: scroll;
       gap: 9px;

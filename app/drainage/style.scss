@@ -225,6 +225,10 @@
       position: absolute;
       right: 100%;
       transform: translateX(100%);
+
+      &--mobile {
+        display: none;
+      }
     }
 
     &__content {
@@ -697,10 +701,10 @@
       transform: translateX(-100%);
     }
 
-    .video {
-      width: 404px;
-      height: 575px;
-      background: grey;
+    video {
+      height: auto;
+      border-radius: 20px;
+      max-width: 404px;
     }
   }
 
@@ -796,6 +800,440 @@
 
       .mobile {
         display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .drainage-page {
+    .drainage-plot {
+      padding-left: 20px;
+      padding-right: 20px;
+      position: relative;
+
+      &__content {
+        flex-direction: column;
+
+        &__left {
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        &__right {
+          &__line {
+            &--2 {
+              justify-content: normal;
+
+              .drainage-plot__content__right__line__content {
+                align-items: flex-end;
+              }
+              .drainage-plot__content__right__line--image {
+                max-width: 261px;
+                width: 100%;
+              }
+
+              img {
+                width: 100%;
+                height: auto;
+              }
+            }
+          }
+        }
+      }
+
+      h2 {
+        font-size: 56px;
+        line-height: 62px;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 100%;
+        max-width: 63%;
+      }
+
+      &--dec {
+        top: 55%;
+        img {
+          width: 90px;
+          height: auto;
+        }
+      }
+    }
+
+    .drainage-without {
+      // margin-top: 46px;
+
+      &__line {
+        padding-right: 20px;
+        padding-left: 20px;
+        flex-direction: column;
+        display: flex;
+
+        &--1 {
+          padding-left: 0;
+          padding-right: 0;
+        }
+
+        &--image {
+          padding-right: 20px;
+          padding-left: 20px;
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+
+      &__item {
+        padding: 45px 28px;
+        width: 100%;
+
+        &__content {
+          &::after {
+            right: 0;
+          }
+        }
+
+        &--images {
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    .drainage-deal {
+      padding: 46px 34px;
+      padding-bottom: 300px;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      &--dec {
+        display: none;
+        &--mobile {
+          display: block;
+          bottom: -10px;
+          left: 0;
+          right: 0;
+          transform: none;
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+
+      &__content {
+        width: 100%;
+
+        h3 {
+          font-size: 48px;
+          text-align: center;
+          div {
+            font-size: 36px;
+            text-align: center;
+            margin-top: 4px;
+          }
+        }
+
+        p {
+          font-size: 15px;
+        }
+      }
+    }
+
+    .drainage-materials {
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-bottom: 46px;
+      &__first-line {
+        flex-direction: column;
+
+        &__left {
+          gap: 14px;
+          h2 {
+            font-size: 48px;
+          }
+
+          &--description {
+            padding: 0;
+            &::after {
+              content: none;
+            }
+          }
+        }
+
+        &__right {
+          margin-top: 25px;
+          &--image {
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+      }
+
+      &__second-line {
+        flex-direction: column;
+        height: auto;
+      }
+
+      &__item {
+        &--accent {
+          padding: 46px 59px 46px 28px;
+          position: relative;
+          overflow: hidden;
+
+          img {
+            display: none;
+          }
+
+          .drainage-materials__item--description {
+            max-width: 200px;
+          }
+
+          &::after {
+            content: url("/images/shield34.png");
+            position: absolute;
+            right: 0;
+            bottom: -10px;
+            top: auto;
+            left: auto;
+          }
+        }
+
+        &--bg-dec {
+          padding: 46px 35px;
+        }
+
+        &--title {
+          font-size: 28px;
+        }
+
+        &--description {
+          font-size: 15px;
+        }
+      }
+
+      &__item-wrapper {
+        &--with-dec {
+          height: 100%;
+
+          .drainage-materials__item {
+            padding: 46px 35px;
+          }
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    .drainage-why-us {
+      padding-right: 20px;
+      padding-left: 20px;
+      overflow: hidden;
+      &__header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 150px;
+
+        h2 {
+          font-size: 48px;
+          line-height: 100%;
+        }
+
+        &__description {
+          z-index: 2;
+        }
+      }
+      &__content {
+        grid-template-columns: 1fr;
+        margin-top: 0;
+        height: auto;
+      }
+
+      &--dec-image {
+        margin-top: -380px;
+        width: 150%;
+        height: auto;
+      }
+
+      &__block {
+        max-width: 100% !important;
+      }
+    }
+
+    .drainage-quiz {
+      padding-left: 20px;
+      padding-right: 20px;
+      flex-direction: column;
+      gap: 36px;
+
+      &__left {
+        gap: 46px;
+        &__text {
+          gap: 16px;
+          h2 {
+            font-size: 48px;
+            line-height: 100%;
+          }
+
+          p {
+            font-size: 28px;
+            line-height: 100%;
+          }
+        }
+
+        &__cta {
+          font-size: 18px;
+        }
+      }
+
+      &__header {
+        padding-left: 28px;
+
+        p {
+          text-align: left;
+        }
+      }
+
+      &__content {
+        padding: 20px 28px;
+      }
+
+      &__question {
+        font-size: 16px;
+      }
+    }
+
+    .drainage-how-we-work {
+      padding-right: 20px;
+      padding-left: 20px;
+      gap: 36px;
+      h2 {
+        font-size: 48px;
+        line-height: 100%;
+      }
+
+      &__content {
+        flex-direction: column;
+        gap: 28px;
+      }
+
+      &__wrapper-blocks {
+        flex-direction: column;
+        gap: 28px;
+      }
+
+      &__block {
+        &--accent {
+          &__content {
+            padding: 40px 30px;
+          }
+        }
+      }
+    }
+
+    .drainage-reviews {
+      margin-top: 46px;
+      padding-right: 20px;
+      padding-left: 20px;
+
+      &__text {
+        flex-direction: column;
+        gap: 36px;
+
+        &--description {
+          width: 100%;
+
+          video {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+          }
+        }
+      }
+
+      &--dec {
+        display: none;
+      }
+    }
+
+    .advantages-in-numbers {
+      padding-left: 20px;
+      padding-right: 20px;
+      &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* две колонки */
+        gap: 20px;
+        row-gap: 44px;
+        position: relative;
+
+        img {
+          position: absolute;
+          left: -100px;
+          top: 50%;
+        }
+
+        &__text {
+          grid-column: 2 / 6;
+          &--mobile {
+            grid-column: 1 / -1;
+            grid-row: 1;
+          }
+
+          h3 {
+            font-size: 56px;
+            line-height: 100%;
+          }
+
+          p {
+            font-size: 16px;
+            line-height: 100%;
+          }
+        }
+      }
+    }
+
+    .about-cta {
+      margin-top: 46px;
+    }
+
+    .drainage-faq {
+      flex-direction: column;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-top: 46px;
+      gap: 49px;
+      &__header {
+        &__text {
+          h2 {
+            font-size: 48px;
+            line-height: 100%;
+          }
+
+          p {
+            display: none;
+          }
+        }
+
+        .btn {
+          display: none;
+        }
+      }
+
+      .faq__item--question {
+        font-size: 18px;
       }
     }
   }

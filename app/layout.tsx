@@ -5,6 +5,7 @@ import Header from "@components/Header";
 import Footer from "@components/Footer";
 import Script from "next/script";
 import { balkara, manrope } from "./fonts";
+import PopupLayer from "@/components/Quiz/PopupLayer";
 export default function RootLayout({
   children,
 }: {
@@ -26,6 +27,7 @@ export default function RootLayout({
         <Header />
         <main>{children}</main>
         <Footer />
+        <PopupLayer />
       </body>
     </html>
   );

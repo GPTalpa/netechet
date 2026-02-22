@@ -6,10 +6,11 @@ import { usePathname } from "next/navigation";
 
 import "./style.scss";
 import Button from "@components/Button";
+import { useState } from "react";
+import QuizPopup from "../Quiz/QuizPopup";
 
 export default function Header() {
   const pathname = usePathname();
-  console.log(pathname);
   return (
     <header className="header">
       <div className="header__left">
@@ -87,7 +88,12 @@ export default function Header() {
               loading="eager"
             ></Image>
           </Link>
-          <Button isHeader={true} text="Заказать звонок" isBlack={false} />
+          <Button
+            isHeader={true}
+            text="Обратный звонок"
+            isBlack={false}
+            isQuiz={true}
+          />
         </div>
         <div className="header__burger">
           <span></span>

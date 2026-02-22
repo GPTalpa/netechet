@@ -1,7 +1,3 @@
-import Link from "next/link";
-import Image from "next/image";
-// import { usePathname } from "next/navigation";
-
 import "./style.scss";
 
 interface IButton {
@@ -10,6 +6,8 @@ interface IButton {
   className?: string;
   isHeader?: boolean;
   isServices?: boolean;
+  isQuiz?: boolean;
+  data?: string;
 }
 
 export default function Button({
@@ -17,10 +15,12 @@ export default function Button({
   isBlack,
   isHeader,
   isServices,
+  data = "quiz",
 }: IButton) {
   return (
     <button
       className={`btn ${isBlack ? "btn--black" : ""} ${isHeader ? "btn--header" : ""} ${isServices ? "btn--services" : ""}`}
+      data-popup={data}
     >
       {text}
     </button>

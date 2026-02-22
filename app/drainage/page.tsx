@@ -1,3 +1,5 @@
+"use client";
+
 import "./style.scss";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -8,7 +10,10 @@ import Drainage from "@components/Drainage";
 import Certificats from "@components/Certificats";
 import Cta from "@components/Cta";
 import Link from "next/link";
-
+import OptimizedVideo from "@components/OptimizedVideo";
+import RadioCard from "@components/RadioCard";
+import { useState } from "react";
+import Quiz from "@/components/Quiz/Quiz";
 // import { homePageMeta } from "./head";
 
 // const Button = dynamic(() => import("@/components/Button/Button"), {
@@ -63,6 +68,7 @@ import Link from "next/link";
 // };
 
 export default function DrainagePage() {
+  const [answer, setAnswer] = useState("");
   return (
     <div className="drainage-page">
       <Drainage />
@@ -75,7 +81,7 @@ export default function DrainagePage() {
             alt="Дренаж участка"
           />
 
-          <div className="advantages-in-numbers__container__text">
+          <div className="advantages-in-numbers__container__text advantages-in-numbers__container__text--mobile">
             <h3>3 года</h3>
             <p>
               гарантия на работы в соответствии <br /> с ФЗ «о защите прав
@@ -261,6 +267,14 @@ export default function DrainagePage() {
         <div className="drainage-deal--dec">
           <Image
             src="/images/dec2-half-big-right.png"
+            alt=""
+            width={263}
+            height={463}
+          />
+        </div>
+        <div className="drainage-deal--dec drainage-deal--dec--mobile">
+          <Image
+            src="/images/dec-half-big-mobile.png"
             alt=""
             width={263}
             height={463}
@@ -468,6 +482,28 @@ export default function DrainagePage() {
           </div>
         </div>
       </div>
+      <div className="container drainage-quiz">
+        <div className="drainage-quiz__left">
+          <div className="drainage-quiz__left__text">
+            <h2>Монтаж дренажной системы</h2>
+            <p>от 1500₽ за МП</p>
+          </div>
+          <p className="drainage-quiz__left__cta">
+            Оставьте заявку и получите подарок:
+            <br />{" "}
+            <span style={{ color: "rgba(225, 208, 168, 1)" }}>
+              бесплатный выезд инженера при
+              <br /> монтаже до конца месяца.
+            </span>
+          </p>
+        </div>
+        <div className="drainage-quiz__right">
+          <div className="drainage-quiz__header">
+            <p>Расчет стоимости</p>
+          </div>
+          <Quiz type="page" />
+        </div>
+      </div>
       <div className="container drainage-how-we-work">
         <h2>
           Как мы
@@ -564,7 +600,7 @@ export default function DrainagePage() {
             О нас говорят <br></br>клиенты
           </h2>
           <div className="drainage-reviews__text--description">
-            <div className="video"></div>
+            <OptimizedVideo videoName="review1" />
           </div>
         </div>
         <div className="drainage-reviews--dec">
@@ -583,7 +619,7 @@ export default function DrainagePage() {
             <h2>Часто задаваемые вопросы</h2>
             <p>Остались вопросы? Задайте их нам!</p>
           </div>
-          <Button text="Задать свой вопрос" isBlack={false} />
+          <Button text="Задать свой вопрос" isBlack={false} data="faq" />
         </div>
         <div className="drainage-faq__content">
           <div className="faq_right">

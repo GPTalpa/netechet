@@ -9,7 +9,6 @@ import Button from "@components/Button";
 
 export default function Footer() {
   const pathname = usePathname();
-  console.log(pathname);
   return (
     <footer className="footer__wrapper">
       <div className="footer">
