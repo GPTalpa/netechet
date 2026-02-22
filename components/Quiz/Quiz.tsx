@@ -5,15 +5,19 @@ import { quizData, quizDataModal } from "@/data/quizData";
 import RadioCard from "@components/RadioCard";
 import QuizFormModal from "./QuizFormModal";
 
+type QuizKey = "foundation" | "lvlWater" | "service" | "term";
+
+type QuizAnswers = Partial<Record<QuizKey, string>>;
+
 type State = {
   step: number;
-  answers: Record<number, string>;
+  answers: QuizAnswers;
 };
 
 type Action =
   | { type: "NEXT" }
   | { type: "BACK" }
-  | { type: "ANSWER"; id: number; value: string }
+  | { type: "ANSWER"; key: QuizKey; value: string }
   | { type: "RESET" };
 
 const initialState: State = {
@@ -30,7 +34,7 @@ function reducer(state: State, action: Action): State {
     case "ANSWER":
       return {
         ...state,
-        answers: { ...state.answers, [action.id]: action.value },
+        answers: { ...state.answers, [action.key]: action.value },
       };
     case "RESET":
       return initialState;
@@ -72,7 +76,7 @@ export default function Quiz({ type }: { type: "modal" | "page" }) {
   const handleAnswer = (value: string) => {
     dispatch({
       type: "ANSWER",
-      id: current.id,
+      key: current.key,
       value,
     });
   };
@@ -93,7 +97,7 @@ export default function Quiz({ type }: { type: "modal" | "page" }) {
                     id={id}
                     name={`question-${current.id}`}
                     value={option}
-                    checked={state.answers[current.id] === option}
+                    checked={state.answers[current.key] === option}
                     onChange={(value) => handleAnswer(value)}
                   >
                     {option}

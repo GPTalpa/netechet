@@ -153,6 +153,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 9;
 
   .drainage-quiz {
     &__content {

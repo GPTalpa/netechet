@@ -102,7 +102,7 @@ export default function Footer() {
           </address>
           <Button text="обратный звонок" isBlack={false} />
           <address className="footer__telegram">
-            <Link href="#">
+            <Link href="https://t.me/netechet" target="_blank">
               <Image
                 src="/icons/tg.svg"
                 width={46}

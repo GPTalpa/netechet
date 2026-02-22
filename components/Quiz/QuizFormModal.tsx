@@ -4,10 +4,17 @@ import PhoneField from "../PhoneInput/PhoneInput";
 import "./style.scss";
 import { useState } from "react";
 
+type QuizData = {
+  foundation?: string;
+  lvlWater?: string;
+  service?: string;
+  term?: string;
+};
+
 type Props = {
   isOpen: boolean;
   onClose: () => void;
-  quizAnswers?: Record<number, string>;
+  quizAnswers?: QuizData;
   textBtn?: string;
   textPlaceholder?: string;
 };
@@ -33,7 +40,7 @@ export default function QuizFormModal({
       method: "POST",
       body: JSON.stringify({
         quiz: quizAnswers,
-        contact: { name, phone },
+        contact: { name, phone, customValue },
       }),
     });
 

@@ -104,7 +104,11 @@ export default function Contacts() {
               </p>
               <p style={{ fontWeight: 700 }}>ИНН</p>
               <p style={{ fontWeight: 700 }}>ОГРН</p>
-              <Link href="#" className="contacts__telegram">
+              <Link
+                href="https://t.me/netechet"
+                target="_blank"
+                className="contacts__telegram"
+              >
                 <Image src="/icons/tg-red.svg" alt="" width={46} height={46} />
                 <p>Мы в телеграм!</p>
               </Link>
