@@ -9,6 +9,7 @@ export async function POST(req: Request) {
 
   const message = `
 📩 Новая заявка
+
 👤 Имя: ${name ?? "-"}
 📞 Телефон: ${phone ?? "-"}
 💬 Сообщение: ${customValue ?? "-"}
