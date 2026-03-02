@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 
 import "./style.scss";
 import Button from "@components/Button";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Header() {
   const pathname = usePathname();
@@ -46,7 +46,7 @@ export default function Header() {
             <li>
               <Link
                 href="/about"
-                className={pathname === "/about" ? "active" : ""}
+                className={pathname === "/about/" ? "active" : ""}
                 onClick={onHideMenu}
               >
                 О компании
@@ -56,7 +56,7 @@ export default function Header() {
               <Link
                 href="/drainage"
                 style={{ color: "rgba(225, 208, 168, 1)" }}
-                className={pathname === "/drainage" ? "active" : ""}
+                className={pathname === "/drainage/" ? "active" : ""}
                 onClick={onHideMenu}
               >
                 Дренажная система
@@ -65,7 +65,7 @@ export default function Header() {
             <li>
               <Link
                 href="/contacts"
-                className={pathname === "/contacts" ? "active" : ""}
+                className={pathname === "/contacts/" ? "active" : ""}
                 onClick={onHideMenu}
               >
                 Контакты
@@ -93,7 +93,7 @@ export default function Header() {
           </p>
         </address>
         <div className="header__callback">
-          <Link href="https://t.me/netechet" target="_blank">
+          <Link href="https://t.me/sergeyanikeev97/" target="_blank">
             <Image
               src="/icons/tg.svg"
               width={46}
@@ -106,6 +106,7 @@ export default function Header() {
           <Button
             isHeader={true}
             text="Обратный звонок"
+            data="faq"
             isBlack={false}
             isQuiz={true}
           />
@@ -187,6 +188,7 @@ export default function Header() {
             text="Рассчитать стоимость"
             isBlack={false}
             isQuiz={true}
+            data="faq"
             onClick={onHideMenu}
           />
         </div>

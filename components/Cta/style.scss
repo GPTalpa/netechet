@@ -2,7 +2,7 @@
   padding: 87px 46px;
   display: flex;
   justify-content: flex-start;
-  background: url(/images/about-cta-bg.png);
+  background: url(/images/about-cta-bg.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -23,7 +23,7 @@
       max-width: 635px;
       aspect-ratio: 635 / 731;
 
-      background-image: url("/images/about-cta-hero.png");
+      background-image: url("/images/about-cta-hero.webp");
       background-size: contain;
       background-repeat: no-repeat;
     }

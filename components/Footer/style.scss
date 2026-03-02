@@ -2,7 +2,7 @@
   padding: 43px 100px 49px;
   display: flex;
   justify-content: space-between;
-  background: url(/images/footer-bg.png);
+  background: url(/images/footer-bg.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -40,7 +40,7 @@
       max-width: 635px;
       aspect-ratio: 635 / 731;
 
-      background-image: url("/images/drainage-hero.png");
+      background-image: url("/images/drainage-hero.webp");
       background-size: contain;
       background-repeat: no-repeat;
     }
@@ -154,7 +154,7 @@
     &::after {
       content: "";
       inset: 0;
-      background: url(/images/bg_container.png);
+      background: url(/images/bg_container.webp);
       position: absolute;
       pointer-events: none;
     }

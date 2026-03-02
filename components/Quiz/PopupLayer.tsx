@@ -5,7 +5,7 @@ import QuizPopup from "../Quiz/QuizPopup";
 import QuizFormModal from "../Quiz/QuizFormModal";
 
 export default function PopupLayer() {
-  const [type, setType] = useState<"quiz" | "faq" | null>(null);
+  const [type, setType] = useState<"quiz" | "faq" | "popup" | null>(null);
 
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
@@ -18,6 +18,7 @@ export default function PopupLayer() {
         const popupType = popupTrigger.dataset.popup as
           | "quiz"
           | "faq"
+          | "popup"
           | undefined;
 
         if (popupType) {
@@ -53,6 +54,29 @@ export default function PopupLayer() {
               isOpen={true}
               onClose={close}
               textBtn="Отправить вопрос"
+              textPlaceholder="Ваш вопрос"
+            />
+            <button className="modal-close" onClick={close}>
+              ×
+            </button>
+          </div>
+        </div>
+      )}
+
+      {type === "popup" && (
+        <div className="form__modal">
+          <div className="popup__wrapper">
+            <h3 className="popup__header">
+              Оставьте Ваши данные
+              <br />и{" "}
+              <span style={{ color: "rgba(143, 33, 45, 1)" }}>
+                мы свяжемся с вами
+              </span>
+            </h3>
+            <QuizFormModal
+              isOpen={true}
+              onClose={close}
+              textBtn="Перезвоните мне"
               textPlaceholder="Ваш вопрос"
             />
             <button className="modal-close" onClick={close}>

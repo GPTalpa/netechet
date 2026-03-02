@@ -36,11 +36,18 @@ export default function QuizFormModal({
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    await fetch("/api/quiz", {
+    await fetch("/send.php", {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({
         quiz: quizAnswers,
-        contact: { name, phone, customValue },
+        contact: {
+          name,
+          phone,
+          customValue,
+        },
       }),
     });
 

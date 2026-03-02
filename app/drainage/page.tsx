@@ -1,74 +1,52 @@
-"use client";
+export const dynamic = "force-static";
 
 import "./style.scss";
 import { Metadata } from "next";
 import Image from "next/image";
-import dynamic from "next/dynamic";
 import Button from "@components/Button";
 import Projects from "@components/Projects";
 import Drainage from "@components/Drainage";
 import Certificats from "@components/Certificats";
 import Cta from "@components/Cta";
-import Link from "next/link";
 import OptimizedVideo from "@components/OptimizedVideo";
-import RadioCard from "@components/RadioCard";
-import { useState } from "react";
 import Quiz from "@/components/Quiz/Quiz";
-// import { homePageMeta } from "./head";
+import { homePageMeta } from "./head";
 
-// const Button = dynamic(() => import("@/components/Button/Button"), {
-//   loading: () => (
-//     <div
-//       className="button-skeleton"
-//       style={{
-//         height: "48px",
-//         width: "120px",
-//         background: "#1a1a1a",
-//         borderRadius: "24px",
-//       }}
-//     />
-//   ),
-// });
-
-// export const metadata: Metadata = {
-//   title: homePageMeta.title,
-//   description: homePageMeta.description,
-//   keywords: homePageMeta.keywords,
-//   alternates: {
-//     canonical: "https://maximbet.com/",
-//     languages: {
-//       en: "https://maximbet.com/",
-//       "x-default": "https://maximbet.com/",
-//     },
-//   },
-//   openGraph: {
-//     title: "Latest iGaming, Casino & Betting News | MaximBet",
-//     description:
-//       "MaximBet covers gaming, casino and betting industry news, publishing features, guides and explainers focused on market activity and regulatory developments.",
-//     type: "website",
-//     url: "https://maximbet.com/",
-//     locale: "en",
-//     siteName: "MaximBet",
-//     images: [
-//       {
-//         url: "https://maximbet.com/images/ogBanner.webp",
-//         width: 1200,
-//         height: 630,
-//         alt: "MaximBet logo on a dark background",
-//       },
-//     ],
-//   },
-//   twitter: {
-//     card: "summary_large_image",
-//     title: "Latest iGaming, Casino & Betting News | MaximBet",
-//     description:
-//       "MaximBet covers gaming, casino and betting industry news, publishing features, guides and explainers focused on market activity and regulatory developments.",
-//     images: ["https://maximbet.com/images/ogBanner.webp"],
-//   },
-// };
+export const metadata: Metadata = {
+  title: homePageMeta.title,
+  description: homePageMeta.description,
+  keywords: homePageMeta.keywords,
+  alternates: {
+    canonical: "https://нетечет.рф/drainage/",
+    languages: {
+      ru: "https://нетечет.рф/drainage/",
+    },
+  },
+  openGraph: {
+    title: homePageMeta.title,
+    description: homePageMeta.description,
+    type: "website",
+    url: "https://нетечет.рф/drainage/",
+    locale: "ru",
+    siteName: "Нетечет",
+    images: [
+      {
+        url: "https://нетечет.рф/images/logo-big.png",
+        width: 400,
+        height: 400,
+        alt: "Нетечет логотип",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: homePageMeta.title,
+    description: homePageMeta.description,
+    images: ["https://нетечет.рф/images/logo-big.png"],
+  },
+};
 
 export default function DrainagePage() {
-  const [answer, setAnswer] = useState("");
   return (
     <div className="drainage-page">
       <Drainage />
@@ -101,7 +79,7 @@ export default function DrainagePage() {
         <div className="drainage-plot__content">
           <div className="drainage-plot__content__left">
             <Image
-              src="/images/image_32.png"
+              src="/images/image_32.webp"
               alt="Дренаж участка"
               width={466}
               height={597}
@@ -124,7 +102,7 @@ export default function DrainagePage() {
               <div className="drainage-plot__content__right__line__content">
                 <div className="drainage-plot__content__right__line--image">
                   <Image
-                    src="/images/image_33.png"
+                    src="/images/image_33.webp"
                     alt="Дренаж участка"
                     width={440}
                     height={156}
@@ -155,7 +133,7 @@ export default function DrainagePage() {
           <Drainage variant={2} />
           <div className="drainage-without__line--image">
             <Image
-              src="/images/image_34.png"
+              src="/images/image_34.webp"
               width={499}
               height={388}
               alt="Участок без дренажа"
@@ -410,7 +388,7 @@ export default function DrainagePage() {
           </div>
         </div>
         <Image
-          src="/images/image_20.png"
+          src="/images/image_20.webp"
           className="drainage-why-us--dec-image"
           alt="Избушка"
           width={1536}
@@ -657,7 +635,7 @@ export default function DrainagePage() {
             <details className="faq__item" id="faq-q2">
               <summary className="faq__summary">
                 <span className="faq__item--question">
-                  Какой срок службы дренажной системы?
+                  Нужно ли обслуживать дренаж?
                 </span>
                 <span className="faq__chev" aria-hidden="true">
                   <svg
@@ -680,15 +658,15 @@ export default function DrainagePage() {
               </summary>
               <div className="faq__content">
                 <p>
-                  При правильном проектировании и монтаже дренаж служит 20–30
-                  лет и более.
+                  Система не требует частого обслуживания. Рекомендуется
+                  периодическая проверка и прочистка для стабильной работы.
                 </p>
               </div>
             </details>
             <details className="faq__item" id="faq-q3">
               <summary className="faq__summary">
                 <span className="faq__item--question">
-                  Какой срок службы дренажной системы?
+                  Сколько стоит монтаж дренажной системы?
                 </span>
                 <span className="faq__chev" aria-hidden="true">
                   <svg
@@ -711,15 +689,16 @@ export default function DrainagePage() {
               </summary>
               <div className="faq__content">
                 <p>
-                  При правильном проектировании и монтаже дренаж служит 20–30
-                  лет и более.
+                  Стоимость рассчитывается индивидуально и зависит от площади
+                  участка, типа дренажа и условий на объекте. Точную цену мы
+                  называем после осмотра участка.
                 </p>
               </div>
             </details>
             <details className="faq__item" id="faq-q4">
               <summary className="faq__summary">
                 <span className="faq__item--question">
-                  Какой срок службы дренажной системы?
+                  Можно ли установить дренаж на уже благоустроенном участке?
                 </span>
                 <span className="faq__chev" aria-hidden="true">
                   <svg
@@ -742,8 +721,8 @@ export default function DrainagePage() {
               </summary>
               <div className="faq__content">
                 <p>
-                  При правильном проектировании и монтаже дренаж служит 20–30
-                  лет и более.
+                  Да. Мы подбираем решения, которые позволяют минимально
+                  вмешиваться в существующее благоустройство.
                 </p>
               </div>
             </details>

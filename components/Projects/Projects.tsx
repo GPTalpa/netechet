@@ -72,6 +72,48 @@ export default function Projects() {
                   <Image
                     width={417}
                     height={436}
+                    src="/images/image123.webp"
+                    alt="Дренажная система"
+                  />
+                </div>
+
+                <div className="projects__slide__text">
+                  <p className="projects__slide__text--title">
+                    Дренажная система
+                  </p>
+                  <p className="projects__slide__text--description">
+                    МО Дмитров
+                  </p>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="projects__slide">
+              <div className="projects__slide__wrapper">
+                <div className="projects__slide--image">
+                  <Image
+                    width={417}
+                    height={436}
+                    src="/images/image_28.webp"
+                    alt="Дренаж фундамента"
+                  />
+                </div>
+
+                <div className="projects__slide__text">
+                  <p className="projects__slide__text--title">
+                    Дренаж фундамента
+                  </p>
+                  <p className="projects__slide__text--description">
+                    МО, Солнечногорск
+                  </p>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="projects__slide">
+              <div className="projects__slide__wrapper">
+                <div className="projects__slide--image">
+                  <Image
+                    width={417}
+                    height={436}
                     src="/images/image_23.webp"
                     alt="Мягкая отмостка"
                   />
@@ -165,27 +207,6 @@ export default function Projects() {
                   </p>
                   <p className="projects__slide__text--description">
                     МО, Павлово КП «лес и река»
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="projects__slide">
-              <div className="projects__slide__wrapper">
-                <div className="projects__slide--image">
-                  <Image
-                    width={417}
-                    height={436}
-                    src="/images/image_28.webp"
-                    alt="Дренаж фундамента"
-                  />
-                </div>
-
-                <div className="projects__slide__text">
-                  <p className="projects__slide__text--title">
-                    Дренаж фундамента
-                  </p>
-                  <p className="projects__slide__text--description">
-                    МО, Солнечногорск
                   </p>
                 </div>
               </div>

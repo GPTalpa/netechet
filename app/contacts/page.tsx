@@ -1,71 +1,52 @@
 import "./style.scss";
 import { Metadata } from "next";
 import Image from "next/image";
-import dynamic from "next/dynamic";
-import Button from "@components/Button";
-import Projects from "@components/Projects";
 
 import Cta from "@components/Cta";
 import Link from "next/link";
-// import { homePageMeta } from "./head";
+import { homePageMeta } from "./head";
 
-// const Button = dynamic(() => import("@/components/Button/Button"), {
-//   loading: () => (
-//     <div
-//       className="button-skeleton"
-//       style={{
-//         height: "48px",
-//         width: "120px",
-//         background: "#1a1a1a",
-//         borderRadius: "24px",
-//       }}
-//     />
-//   ),
-// });
+export const dynamic = "force-static";
 
-// export const metadata: Metadata = {
-//   title: homePageMeta.title,
-//   description: homePageMeta.description,
-//   keywords: homePageMeta.keywords,
-//   alternates: {
-//     canonical: "https://maximbet.com/",
-//     languages: {
-//       en: "https://maximbet.com/",
-//       "x-default": "https://maximbet.com/",
-//     },
-//   },
-//   openGraph: {
-//     title: "Latest iGaming, Casino & Betting News | MaximBet",
-//     description:
-//       "MaximBet covers gaming, casino and betting industry news, publishing features, guides and explainers focused on market activity and regulatory developments.",
-//     type: "website",
-//     url: "https://maximbet.com/",
-//     locale: "en",
-//     siteName: "MaximBet",
-//     images: [
-//       {
-//         url: "https://maximbet.com/images/ogBanner.webp",
-//         width: 1200,
-//         height: 630,
-//         alt: "MaximBet logo on a dark background",
-//       },
-//     ],
-//   },
-//   twitter: {
-//     card: "summary_large_image",
-//     title: "Latest iGaming, Casino & Betting News | MaximBet",
-//     description:
-//       "MaximBet covers gaming, casino and betting industry news, publishing features, guides and explainers focused on market activity and regulatory developments.",
-//     images: ["https://maximbet.com/images/ogBanner.webp"],
-//   },
-// };
-
+export const metadata: Metadata = {
+  title: homePageMeta.title,
+  description: homePageMeta.description,
+  keywords: homePageMeta.keywords,
+  alternates: {
+    canonical: "https://нетечет.рф/contacts/",
+    languages: {
+      ru: "https://нетечет.рф/contacts/",
+    },
+  },
+  openGraph: {
+    title: homePageMeta.title,
+    description: homePageMeta.description,
+    type: "website",
+    url: "https://нетечет.рф/contacts/",
+    locale: "ru",
+    siteName: "Нетечет",
+    images: [
+      {
+        url: "https://нетечет.рф/images/logo-big.png",
+        width: 400,
+        height: 400,
+        alt: "Нетечет логотип",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: homePageMeta.title,
+    description: homePageMeta.description,
+    images: ["https://нетечет.рф/images/logo-big.png"],
+  },
+};
 export default function Contacts() {
   return (
     <div className="contacts">
       <div className="contacts__content">
         <Image
-          src="/images/image_20.png"
+          src="/images/image_20.webp"
           className="contacts__content__decorative-image"
           alt="Избушка"
           width={1536}
@@ -89,7 +70,7 @@ export default function Contacts() {
             </h1>
             <address>
               <p className="contacts__company-name">Компания «Не течет»</p>
-              <p>ИП Фамилия И.О.</p>
+              <p>ИП Аникеев Сергей Алексеевич</p>
               <p>г. Москва</p>
               <p>
                 <span style={{ fontWeight: 700 }}>Телефон: </span>
@@ -102,10 +83,14 @@ export default function Contacts() {
                   <time dateTime="19:00+03:00">19:00</time> МСК
                 </span>
               </p>
-              <p style={{ fontWeight: 700 }}>ИНН</p>
-              <p style={{ fontWeight: 700 }}>ОГРН</p>
+              <p>
+                <span style={{ fontWeight: 700 }}>ИНН:</span> 773013165986
+              </p>
+              <p>
+                <span style={{ fontWeight: 700 }}>ОГРН</span> 326774600058132
+              </p>
               <Link
-                href="https://t.me/netechet"
+                href="https://t.me/sergeyanikeev97/"
                 target="_blank"
                 className="contacts__telegram"
               >

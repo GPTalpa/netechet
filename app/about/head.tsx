@@ -1,21 +1,20 @@
-// import { IPageMeta } from "../types/breadcrumb";
+import { IPageMeta } from "@/types/head";
 
-// export const homePageMeta: IPageMeta = {
-  // title: "Latest iGaming, Casino & Betting News | MaximBet",
-  // description:
-  //   "MaximBet covers gaming, casino and betting industry news, publishing features, guides and explainers focused on market activity and regulatory developments.",
-  // keywords:
-  //   "maximbet, australian pokies, online casino australia, casino news, pokies updates, gambling australia, real money pokies",
-  // breadcrumbs: [{ label: "Home", href: "/" }],
-  // icons: {
-  //   icon: [
-  //     { url: "/favicon.ico", sizes: "32x32" },
-  //     { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
-  //     { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
-  //     { url: "/icon-192.png", sizes: "192x192" },
-  //     { url: "/icon-256.png", sizes: "256x256" },
-  //     { url: "/icon-512.png", sizes: "512x512" },
-  //   ],
-  //   apple: "/apple-touch-icon.png",
-  // },
-// };
+export const homePageMeta: IPageMeta = {
+  title: "О компании Нетечет — дренажные системы и гидроизоляция фундаментов",
+  description:
+    "Компания «Нетечет» специализируется на устройстве дренажа участков, пристенного дренажа, ливневых систем и гидроизоляции фундаментов в Московской области. Опыт, гарантия, работа под ключ.",
+  keywords:
+    "компания дренаж московская область,дренажные работы,монтаж дренажа,устройство дренажа,гидроизоляция фундамента работа,пристенный дренаж,система дренажа дома,дренаж участка работы,выполнение дренажных работ",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon-192.png", sizes: "192x192" },
+      { url: "/icon-256.png", sizes: "256x256" },
+      { url: "/icon-512.png", sizes: "512x512" },
+    ],
+    apple: "/icon-256.png",
+  },
+};

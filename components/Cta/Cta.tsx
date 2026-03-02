@@ -1,5 +1,3 @@
-import Link from "next/link";
-import Image from "next/image";
 import Button from "@components/Button";
 import "./style.scss";
 
@@ -16,7 +14,7 @@ export default function Cta() {
             Наш менеджер свяжется с Вами для уточнения
             <br /> даты и времени выезда инженера на участок!
           </p>
-          <Button text="Получить расчет стоимости" isBlack={false}/>
+          <Button text="Получить расчет стоимости" isBlack={false} />
         </div>
       </div>
     </div>

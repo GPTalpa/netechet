@@ -1,11 +1,7 @@
-// import "normalize.css";
-import "./globals.scss";
-
-import Header from "@components/Header";
-import Footer from "@components/Footer";
-import Script from "next/script";
+export const dynamic = "force-static";
 import { balkara, manrope } from "./fonts";
-import PopupLayer from "@/components/Quiz/PopupLayer";
+import Providers from "./provider";
+import YandexMetrika from "@/components/YandexMetrika/YandexMetrika";
 export default function RootLayout({
   children,
 }: {
@@ -22,12 +18,24 @@ export default function RootLayout({
           type="font/ttf"
           crossOrigin="anonymous"
         />
+        <link
+          rel="preload"
+          href="/fonts/Manrope-Bold.ttf"
+          as="font"
+          type="font/ttf"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/Manrope-Light.ttf"
+          as="font"
+          type="font/ttf"
+          crossOrigin="anonymous"
+        />
       </head>
       <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <PopupLayer />
+        <Providers>{children}</Providers>
+        <YandexMetrika />
       </body>
     </html>
   );

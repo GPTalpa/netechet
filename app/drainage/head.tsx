@@ -1,21 +1,20 @@
-// import { IPageMeta } from "../types/breadcrumb";
+import { IPageMeta } from "@/types/head";
 
-// export const homePageMeta: IPageMeta = {
-  // title: "Latest iGaming, Casino & Betting News | MaximBet",
-  // description:
-  //   "MaximBet covers gaming, casino and betting industry news, publishing features, guides and explainers focused on market activity and regulatory developments.",
-  // keywords:
-  //   "maximbet, australian pokies, online casino australia, casino news, pokies updates, gambling australia, real money pokies",
-  // breadcrumbs: [{ label: "Home", href: "/" }],
-  // icons: {
-  //   icon: [
-  //     { url: "/favicon.ico", sizes: "32x32" },
-  //     { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
-  //     { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
-  //     { url: "/icon-192.png", sizes: "192x192" },
-  //     { url: "/icon-256.png", sizes: "256x256" },
-  //     { url: "/icon-512.png", sizes: "512x512" },
-  //   ],
-  //   apple: "/apple-touch-icon.png",
-  // },
-// };
+export const homePageMeta: IPageMeta = {
+  title: "Дренажная система участка и дома под ключ — в МО | Нетечет",
+  description:
+    "Монтаж дренажной системы вокруг дома и участка под ключ. Пристенный и кольцевой дренаж фундамента, отвод грунтовых вод, ливневая канализация. Работаем в Московской области.",
+  keywords:
+    "дренажная система,дренаж вокруг дома,дренаж фундамента цена,пристенный дренаж фундамента,кольцевой дренаж вокруг дома,дренаж грунтовых вод,устройство дренажа вокруг дома,дренаж трубы вокруг дома,монтаж дренажа цена,дренаж под ключ цена",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon-192.png", sizes: "192x192" },
+      { url: "/icon-256.png", sizes: "256x256" },
+      { url: "/icon-512.png", sizes: "512x512" },
+    ],
+    apple: "/icon-256.png",
+  },
+};

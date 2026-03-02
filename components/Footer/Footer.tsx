@@ -102,7 +102,7 @@ export default function Footer() {
           </address>
           <Button text="обратный звонок" isBlack={false} />
           <address className="footer__telegram">
-            <Link href="https://t.me/netechet" target="_blank">
+            <Link href="https://t.me/sergeyanikeev97/" target="_blank">
               <Image
                 src="/icons/tg.svg"
                 width={46}
@@ -140,7 +140,7 @@ export default function Footer() {
               ></Image>
             </Link>
             <address>
-              <p>ИП Фамилия И.О.</p>
+              <p>ИП Аникеев Сергей Алексеевич</p>
             </address>
             <p>2026 г.</p>
           </div>

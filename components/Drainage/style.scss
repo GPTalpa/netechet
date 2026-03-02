@@ -2,7 +2,7 @@
   padding: 87px 41px;
   display: flex;
   justify-content: flex-end;
-  background: url(/images/drainage-bg.png);
+  background: url(/images/drainage-bg.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -23,7 +23,7 @@
       max-width: 635px;
       aspect-ratio: 635 / 731;
 
-      background-image: url("/images/drainage-hero.png");
+      background-image: url("/images/drainage-hero.webp");
       background-size: contain;
       background-repeat: no-repeat;
     }
@@ -32,7 +32,7 @@
       height: -webkit-fill-available;
 
       &::after {
-        background-image: url("/images/drainage-hero--2.png");
+        background-image: url("/images/drainage-hero--2.webp");
         width: 25vw;
         left: 20px;
       }
@@ -65,7 +65,7 @@
     &::after {
       content: "";
       inset: 0;
-      background: url(/images/bg_container.png);
+      background: url(/images/bg_container.webp);
       position: absolute;
       pointer-events: none;
     }
