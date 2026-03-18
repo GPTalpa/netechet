@@ -5,7 +5,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Cta from "@components/Cta";
 import Certificats from "@components/Certificats";
-import { homePageMeta } from "../head";
+import { homePageMeta } from "./head";
 
 export const metadata: Metadata = {
   title: homePageMeta.title,
@@ -43,8 +43,100 @@ export const metadata: Metadata = {
 };
 
 export default function About() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://нетечет.рф/#organization",
+        name: "Нетечет",
+        url: "https://нетечет.рф/",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://нетечет.рф/images/logo-big.png",
+          width: 400,
+          height: 400,
+        },
+        description:
+          "Компания «Нетечет» специализируется на устройстве дренажа участков, пристенного дренажа, ливневых систем и гидроизоляции фундаментов в Москве и Московской области",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Москва",
+          addressRegion: "Московская область",
+          addressCountry: "RU",
+        },
+        areaServed: [
+          {
+            "@type": "City",
+            name: "Москва",
+          },
+          {
+            "@type": "State",
+            name: "Московская область",
+          },
+        ],
+        foundingDate: "2026",
+        email: "info@нетечет.рф",
+        telephone: "+7-925-285-29-55",
+        sameAs: ["https://t.me/netechetmsk/"],
+      },
+      {
+        "@type": "AboutPage",
+        "@id": "https://нетечет.рф/about/#webpage",
+        url: "https://нетечет.рф/about/",
+        name: "О компании Нетечет — дренажные системы и гидроизоляция фундаментов",
+        description:
+          "Компания «Нетечет» специализируется на устройстве дренажа участков, пристенного дренажа, ливневых систем и гидроизоляции фундаментов в Москве и Московской области. Опыт, гарантия, работа под ключ.",
+        isPartOf: {
+          "@id": "https://нетечет.рф/#website",
+        },
+        about: {
+          "@id": "https://нетечет.рф/#organization",
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: "https://нетечет.рф/images/logo-big.png",
+        },
+        inLanguage: "ru",
+        breadcrumb: {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Главная",
+              item: "https://нетечет.рф/",
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "О компании",
+              item: "https://нетечет.рф/about/",
+            },
+          ],
+        },
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://нетечет.рф/#website",
+        url: "https://нетечет.рф/",
+        name: "Нетечет",
+        description:
+          "Дренаж участка и фундамента под ключ в Москве и Московской области",
+        publisher: {
+          "@id": "https://нетечет.рф/#organization",
+        },
+        inLanguage: "ru",
+      },
+    ],
+  };
+
   return (
     <div className="about">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="container about-company">
         <div className="about-company__left">
           <div className="about-company__image">

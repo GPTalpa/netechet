@@ -43,8 +43,113 @@ export const metadata: Metadata = {
   },
 };
 export default function Contacts() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://нетечет.рф/#organization",
+        name: "Нетечет",
+        url: "https://нетечет.рф/",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://нетечет.рф/images/logo-big.png",
+          width: 400,
+          height: 400,
+        },
+        description:
+          "Компания по дренажу участков и гидроизоляции фундаментов в Москве и Московской области",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Москва",
+          addressRegion: "Московская область",
+          addressCountry: "RU",
+        },
+        contactPoint: [
+          {
+            "@type": "ContactPoint",
+            telephone: "+7-925-285-29-55", // Основной телефон
+            contactType: "customer service",
+            areaServed: ["Москва", "Московская область"],
+            availableLanguage: "Russian",
+          },
+        ],
+        email: "info@нетечет.рф",
+        sameAs: ["https://t.me/netechetmsk/"],
+      },
+      {
+        "@type": "ContactPage",
+        "@id": "https://нетечет.рф/contacts/#webpage",
+        url: "https://нетечет.рф/contacts/",
+        name: "Контакты компании Нетечет — дренаж и гидроизоляция в Москве и МО",
+        description:
+          "Свяжитесь с компанией «Нетечет» для расчета стоимости дренажа участка, устройства ливневки или гидроизоляции фундамента. Работаем по всей Москве и Московской области.",
+        isPartOf: {
+          "@id": "https://нетечет.рф/#website",
+        },
+        about: {
+          "@id": "https://нетечет.рф/#organization",
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: "https://нетечет.рф/images/logo-big.png",
+        },
+        inLanguage: "ru",
+        breadcrumb: {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Главная",
+              item: "https://нетечет.рф/",
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Контакты",
+              item: "https://нетечет.рф/contacts/",
+            },
+          ],
+        },
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://нетечет.рф/#website",
+        url: "https://нетечет.рф/",
+        name: "Нетечет",
+        description:
+          "Дренаж участка и фундамента под ключ в Москве и Московской области",
+        publisher: {
+          "@id": "https://нетечет.рф/#organization",
+        },
+        inLanguage: "ru",
+      },
+    ],
+  };
+
+  const contactPoint = {
+    "@context": "https://schema.org",
+    "@type": "ContactPoint",
+    name: "Быстрая связь через мессенджеры",
+    telephone: "+7-925-285-29-55",
+    contactType: "customer support",
+    contactOption: "TollFree",
+    areaServed: ["Москва", "Московская область"],
+    availableLanguage: ["Russian"],
+    sameAs: ["https://t.me/netechetmsk/"],
+  };
+
   return (
     <div className="contacts">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPoint) }}
+      />
       <div className="contacts__content">
         <Image
           src="/images/image_20.webp"

@@ -49,8 +49,186 @@ export const metadata: Metadata = {
 };
 
 export default function DrainagePage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://нетечет.рф/#organization",
+        name: "Нетечет",
+        url: "https://нетечет.рф/",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://нетечет.рф/images/logo-big.png",
+          width: 400,
+          height: 400,
+        },
+        description:
+          "Монтаж дренажной системы вокруг дома и участка под ключ в Москве и МО",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Москва",
+          addressRegion: "Московская область",
+          addressCountry: "RU",
+        },
+        areaServed: [
+          {
+            "@type": "City",
+            name: "Москва",
+          },
+          {
+            "@type": "State",
+            name: "Московская область",
+          },
+        ],
+      },
+      {
+        "@type": "Service",
+        "@id": "https://нетечет.рф/drainage/#service",
+        name: "Дренажная система участка и дома под ключ",
+        description:
+          "Монтаж дренажной системы вокруг дома и участка под ключ. Пристенный и кольцевой дренаж фундамента, отвод грунтовых вод, ливневая канализация.",
+        provider: {
+          "@id": "https://нетечет.рф/#organization",
+        },
+        areaServed: ["Москва", "Московская область"],
+        serviceType: "Дренажные работы",
+        offers: {
+          "@type": "AggregateOffer",
+          priceCurrency: "RUB",
+          lowPrice: "расчет индивидуально",
+          highPrice: "расчет индивидуально",
+          offerCount: 1,
+          offers: [
+            {
+              "@type": "Offer",
+              name: "Дренаж участка под ключ",
+              availability: "https://schema.org/InStock",
+            },
+          ],
+        },
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Виды дренажных систем",
+          itemListElement: [
+            {
+              "@type": "Service",
+              name: "Пристенный дренаж фундамента",
+              description: "Защита фундамента от грунтовых вод",
+            },
+            {
+              "@type": "Service",
+              name: "Кольцевой дренаж вокруг дома",
+              description: "Отвод воды по периметру дома",
+            },
+            {
+              "@type": "Service",
+              name: "Ливневая канализация",
+              description: "Отвод дождевой воды",
+            },
+          ],
+        },
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://нетечет.рф/drainage/#faq",
+        name: "Часто задаваемые вопросы о дренажных системах",
+        description:
+          "Ответы на популярные вопросы о монтаже и обслуживании дренажных систем",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "Какой срок службы дренажной системы?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "При правильном проектировании и монтаже дренаж служит 20–30 лет и более.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Нужно ли обслуживать дренаж?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Система не требует частого обслуживания. Рекомендуется периодическая проверка и прочистка для стабильной работы.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Сколько стоит монтаж дренажной системы?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Стоимость рассчитывается индивидуально и зависит от площади участка, типа дренажа и условий на объекте. Точную цену мы называем после осмотра участка.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Можно ли установить дренаж на уже благоустроенном участке?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Да. Мы подбираем решения, которые позволяют минимально вмешиваться в существующее благоустройство.",
+            },
+          },
+        ],
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://нетечет.рф/drainage/#webpage",
+        url: "https://нетечет.рф/drainage/",
+        name: "Дренажная система участка и дома под ключ — в Москве и МО | Нетечет",
+        description:
+          "Монтаж дренажной системы вокруг дома и участка под ключ. Пристенный и кольцевой дренаж фундамента, отвод грунтовых вод, ливневая канализация. Работаем в Москве и Московской области.",
+        isPartOf: {
+          "@id": "https://нетечет.рф/#website",
+        },
+        about: {
+          "@id": "https://нетечет.рф/drainage/#service",
+        },
+        mainEntity: {
+          "@id": "https://нетечет.рф/drainage/#faq",
+        },
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: "https://нетечет.рф/images/logo-big.png",
+        },
+        inLanguage: "ru",
+        breadcrumb: {
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Главная",
+              item: "https://нетечет.рф/",
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: "Дренажная система",
+              item: "https://нетечет.рф/drainage/",
+            },
+          ],
+        },
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://нетечет.рф/#website",
+        url: "https://нетечет.рф/",
+        name: "Нетечет",
+        description:
+          "Дренаж участка и фундамента под ключ в Москве и Московской области",
+        publisher: {
+          "@id": "https://нетечет.рф/#organization",
+        },
+        inLanguage: "ru",
+      },
+    ],
+  };
   return (
     <div className="drainage-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Drainage />
       <div className="container advantages-in-numbers">
         <div className="advantages-in-numbers__container">
