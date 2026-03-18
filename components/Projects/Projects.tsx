@@ -82,7 +82,7 @@ export default function Projects() {
                     Дренажная система
                   </p>
                   <p className="projects__slide__text--description">
-                    МО Дмитров
+                    МО, Дмитров
                   </p>
                 </div>
               </div>
@@ -164,7 +164,7 @@ export default function Projects() {
                     Мягкая отмостка + ливневая канализация + дренаж
                   </p>
                   <p className="projects__slide__text--description">
-                    КП, юрьево парк
+                    КП, Юрьево парк
                   </p>
                 </div>
               </div>
@@ -227,7 +227,7 @@ export default function Projects() {
                     Дренажная система
                   </p>
                   <p className="projects__slide__text--description">
-                    МО, хотьково
+                    МО, Хотьково
                   </p>
                 </div>
               </div>

@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   title: homePageMeta.title,
   description: homePageMeta.description,
   keywords: homePageMeta.keywords,
+  icons: homePageMeta.icons,
   alternates: {
     canonical: "https://нетечет.рф/about/",
     languages: {

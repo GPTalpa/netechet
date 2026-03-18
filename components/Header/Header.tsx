@@ -93,7 +93,7 @@ export default function Header() {
           </p>
         </address>
         <div className="header__callback">
-          <Link href="https://t.me/sergeyanikeev97/" target="_blank">
+          <Link href="https://t.me/netechetmsk/" target="_blank">
             <Image
               src="/icons/tg.svg"
               width={46}

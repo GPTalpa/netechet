@@ -11,11 +11,13 @@ import Cta from "@components/Cta";
 import OptimizedVideo from "@components/OptimizedVideo";
 import Quiz from "@/components/Quiz/Quiz";
 import { homePageMeta } from "./head";
+import Reviews from "@/components/Reviews";
 
 export const metadata: Metadata = {
   title: homePageMeta.title,
   description: homePageMeta.description,
   keywords: homePageMeta.keywords,
+  icons: homePageMeta.icons,
   alternates: {
     canonical: "https://нетечет.рф/drainage/",
     languages: {
@@ -446,7 +448,7 @@ export default function DrainagePage() {
                 Работаем строго по договору
               </h3>
               <p className="drainage-why-us__block--description">
-                на следующий день или в удобное для вас время.
+                что защищает ваши права и деньги.
               </p>
             </div>
             <div className="drainage-why-us__block drainage-why-us__block--5">
@@ -572,24 +574,7 @@ export default function DrainagePage() {
           </div>
         </div>
       </div>
-      <div className="container drainage-reviews">
-        <div className="drainage-reviews__text">
-          <h2>
-            О нас говорят <br></br>клиенты
-          </h2>
-          <div className="drainage-reviews__text--description">
-            <OptimizedVideo videoName="review1" />
-          </div>
-        </div>
-        <div className="drainage-reviews--dec">
-          <Image
-            src="/images/dec2-half-big-right-2.png"
-            alt=""
-            width={262}
-            height={482}
-          />
-        </div>
-      </div>
+      <Reviews />
       <Certificats />
       <div className="container drainage-faq">
         <div className="drainage-faq__header">

@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: homePageMeta.title,
   description: homePageMeta.description,
   keywords: homePageMeta.keywords,
+  icons: homePageMeta.icons,
   alternates: {
     canonical: "https://нетечет.рф/contacts/",
     languages: {
@@ -90,7 +91,7 @@ export default function Contacts() {
                 <span style={{ fontWeight: 700 }}>ОГРН</span> 326774600058132
               </p>
               <Link
-                href="https://t.me/sergeyanikeev97/"
+                href="https://t.me/netechetmsk/"
                 target="_blank"
                 className="contacts__telegram"
               >

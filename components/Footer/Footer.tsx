@@ -66,17 +66,21 @@ export default function Footer() {
                 </ul>
                 <ul>
                   <li>
-                    <Link href="#">Политика конфиденциальности</Link>
+                    <Link href="/privacy-policy.pdf" target="_blank">
+                      Политика конфиденциальности
+                    </Link>
                   </li>
                   <li>
-                    <Link href="#">Политика обработки персональных данных</Link>
+                    <Link href="/personal-consent.pdf" target="_blank">
+                      Политика обработки персональных данных
+                    </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href="#">Согласие на обработку файлов cookies</Link>
                   </li>
                   <li>
                     <Link href="#">Управление файлами cookies</Link>
-                  </li>
+                  </li> */}
                 </ul>
               </nav>
             </div>
@@ -102,7 +106,7 @@ export default function Footer() {
           </address>
           <Button text="обратный звонок" isBlack={false} />
           <address className="footer__telegram">
-            <Link href="https://t.me/sergeyanikeev97/" target="_blank">
+            <Link href="https://t.me/netechetmsk/" target="_blank">
               <Image
                 src="/icons/tg.svg"
                 width={46}
@@ -116,17 +120,21 @@ export default function Footer() {
           </address>
           <ul className="footer__navigation--mobile">
             <li>
-              <Link href="#">Политика конфиденциальности</Link>
+              <Link href="/privacy-policy.pdf" target="_blank">
+                Политика конфиденциальности
+              </Link>
             </li>
             <li>
-              <Link href="#">Политика обработки персональных данных</Link>
+              <Link href="/personal-consent.pdf" target="_blank">
+                Политика обработки персональных данных
+              </Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="#">Согласие на обработку файлов cookies</Link>
             </li>
             <li>
               <Link href="#">Управление файлами cookies</Link>
-            </li>
+            </li> */}
           </ul>
           <div className="footer__copyright">
             <Link href="/">

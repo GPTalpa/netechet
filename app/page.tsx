@@ -7,16 +7,18 @@ import Button from "@components/Button";
 import Projects from "@components/Projects";
 import Drainage from "@components/Drainage";
 import { homePageMeta } from "./head";
+import Reviews from "@/components/Reviews";
 
 export const metadata: Metadata = {
   title: homePageMeta.title,
   description: homePageMeta.description,
   keywords: homePageMeta.keywords,
+  icons: homePageMeta.icons,
   alternates: {
     canonical: "https://нетечет.рф/",
     languages: {
       ru: "https://нетечет.рф/",
-      "x-default": "нетечет.рф/",
+      "x-default": "https://нетечет.рф/",
     },
   },
   openGraph: {
@@ -165,6 +167,7 @@ export default function HomePage() {
           </div>
         </div>
       </div>
+      <Reviews />
     </div>
   );
 }

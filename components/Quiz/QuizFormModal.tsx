@@ -80,7 +80,6 @@ export default function QuizFormModal({
             onChange={(e) => {
               setCustomValue(e.target.value);
             }}
-            required
           />
           <div className="consent">
             <input
@@ -109,11 +108,11 @@ export default function QuizFormModal({
 
               <span className="consent__text">
                 Согласен с{" "}
-                <a href="#" target="_blank">
+                <a href="/privacy-policy.pdf" target="_blank">
                   Политикой конфиденциальности
                 </a>{" "}
                 и даю{" "}
-                <a href="#" target="_blank">
+                <a href="/personal-consent.pdf" target="_blank">
                   Согласие на обработку персональных данных
                 </a>{" "}
               </span>

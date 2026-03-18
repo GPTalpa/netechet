@@ -3,7 +3,7 @@ import { MetadataRoute } from "next";
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://нетечет.рф";
+  const baseUrl = "https://нетечет.рф/";
 
   return [
     {
@@ -12,17 +12,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${baseUrl}/drainage/`,
+      url: `${baseUrl}drainage/`,
       lastModified: new Date(),
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/about/`,
+      url: `${baseUrl}about/`,
       lastModified: new Date(),
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/contacts/`,
+      url: `${baseUrl}contacts/`,
       lastModified: new Date(),
       priority: 0.8,
     },
