@@ -93,12 +93,25 @@ export default function Header() {
           </p>
         </address>
         <div className="header__callback">
+          <Link
+            href="https://max.ru/u/f9LHodD0cOIM_CFGBXTdBHOzzxVmm5-tJHgwirF83XVhim0mQzAL4n3FW4E"
+            target="_blank"
+          >
+            <Image
+              src="/icons/max.png"
+              width={46}
+              height={46}
+              alt="Макс"
+              fetchPriority="high"
+              loading="eager"
+            ></Image>
+          </Link>
           <Link href="https://t.me/netechetmsk/" target="_blank">
             <Image
               src="/icons/tg.svg"
               width={46}
               height={46}
-              alt="Telegram"
+              alt="Телеграм"
               fetchPriority="high"
               loading="eager"
             ></Image>

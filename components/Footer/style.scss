@@ -100,6 +100,9 @@
 
   &__telegram {
     margin-bottom: 77px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     a {
       display: flex;
       align-items: center;

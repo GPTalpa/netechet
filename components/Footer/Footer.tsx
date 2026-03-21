@@ -117,6 +117,20 @@ export default function Footer() {
               ></Image>
               Мы в Телеграм!
             </Link>
+            <Link
+              href="https://max.ru/u/f9LHodD0cOIM_CFGBXTdBHOzzxVmm5-tJHgwirF83XVhim0mQzAL4n3FW4E"
+              target="_blank"
+            >
+              <Image
+                src="/icons/max.png"
+                width={46}
+                height={46}
+                alt="Макс"
+                fetchPriority="high"
+                loading="eager"
+              ></Image>
+              Мы в Максе!
+            </Link>
           </address>
           <ul className="footer__navigation--mobile">
             <li>

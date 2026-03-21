@@ -75,7 +75,10 @@ export default function Contacts() {
           },
         ],
         email: "info@нетечет.рф",
-        sameAs: ["https://t.me/netechetmsk/"],
+        sameAs: [
+          "https://t.me/netechetmsk/",
+          "https://max.ru/u/f9LHodD0cOIM_CFGBXTdBHOzzxVmm5-tJHgwirF83XVhim0mQzAL4n3FW4E",
+        ],
       },
       {
         "@type": "ContactPage",
@@ -137,7 +140,10 @@ export default function Contacts() {
     contactOption: "TollFree",
     areaServed: ["Москва", "Московская область"],
     availableLanguage: ["Russian"],
-    sameAs: ["https://t.me/netechetmsk/"],
+    sameAs: [
+      "https://t.me/netechetmsk/",
+      "https://max.ru/u/f9LHodD0cOIM_CFGBXTdBHOzzxVmm5-tJHgwirF83XVhim0mQzAL4n3FW4E",
+    ],
   };
 
   return (
@@ -202,6 +208,14 @@ export default function Contacts() {
               >
                 <Image src="/icons/tg-red.svg" alt="" width={46} height={46} />
                 <p>Мы в телеграм!</p>
+              </Link>
+              <Link
+                href="https://max.ru/u/f9LHodD0cOIM_CFGBXTdBHOzzxVmm5-tJHgwirF83XVhim0mQzAL4n3FW4E"
+                target="_blank"
+                className="contacts__telegram"
+              >
+                <Image src="/icons/max.png" alt="" width={46} height={46} />
+                <p>Мы в Максе!</p>
               </Link>
             </address>
           </div>

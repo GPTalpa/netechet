@@ -226,7 +226,7 @@ export default function HomePage() {
                   isBlack={false}
                   isServices={true}
                 />
-                <Button text={"Подробнее"} isBlack={true} isServices={true} />
+                {/* <Button text={"Подробнее"} isBlack={true} isServices={true} /> */}
               </div>
             </div>
           </div>
