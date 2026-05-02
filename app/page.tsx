@@ -8,6 +8,9 @@ import Projects from "@components/Projects";
 import Drainage from "@components/Drainage";
 import { homePageMeta } from "./head";
 import Reviews from "@/components/Reviews";
+import Link from "next/link";
+import Services from "@/components/Services";
+import Stocks from "@/components/Stocks";
 
 export const metadata: Metadata = {
   title: homePageMeta.title,
@@ -193,8 +196,10 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Drainage />
+      <Stocks />
       <Projects />
-      <div className="container services">
+      <Services />
+      {/* <div className="container services">
         <h2>услуги</h2>
         <div className="services__content">
           <div className="services__item services__item--contrast">
@@ -226,7 +231,12 @@ export default function HomePage() {
                   isBlack={false}
                   isServices={true}
                 />
-                {/* <Button text={"Подробнее"} isBlack={true} isServices={true} /> */}
+                <Link
+                  href="/drainage"
+                  className="btn btn--black  btn--services"
+                >
+                  Подробнее
+                </Link>
               </div>
             </div>
           </div>
@@ -310,7 +320,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <Reviews />
     </div>
   );

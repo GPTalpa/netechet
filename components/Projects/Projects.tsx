@@ -11,6 +11,8 @@ import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import "./style.scss";
 
+import { cases } from "@/data/cases";
+
 export default function Projects() {
   const prevRef = useRef<HTMLButtonElement>(null);
   const nextRef = useRef<HTMLButtonElement>(null);
@@ -66,172 +68,29 @@ export default function Projects() {
               });
             }}
           >
-            <SwiperSlide className="projects__slide">
-              <div className="projects__slide__wrapper">
-                <div className="projects__slide--image">
-                  <Image
-                    width={417}
-                    height={436}
-                    src="/images/image123.webp"
-                    alt="Дренажная система"
-                  />
-                </div>
+            {cases.map((e, i) => {
+              return (
+                <SwiperSlide className="projects__slide" key={i}>
+                  <div className="projects__slide__wrapper">
+                    <div className="projects__slide--image">
+                      <Image
+                        width={417}
+                        height={436}
+                        src={`/images/cases/${e.image}`}
+                        alt={`${e.title} ${e.pos}`}
+                      />
+                    </div>
 
-                <div className="projects__slide__text">
-                  <p className="projects__slide__text--title">
-                    Дренажная система
-                  </p>
-                  <p className="projects__slide__text--description">
-                    МО, Дмитров
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="projects__slide">
-              <div className="projects__slide__wrapper">
-                <div className="projects__slide--image">
-                  <Image
-                    width={417}
-                    height={436}
-                    src="/images/image_28.webp"
-                    alt="Дренаж фундамента"
-                  />
-                </div>
-
-                <div className="projects__slide__text">
-                  <p className="projects__slide__text--title">
-                    Дренаж фундамента
-                  </p>
-                  <p className="projects__slide__text--description">
-                    МО, Солнечногорск
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="projects__slide">
-              <div className="projects__slide__wrapper">
-                <div className="projects__slide--image">
-                  <Image
-                    width={417}
-                    height={436}
-                    src="/images/image_23.webp"
-                    alt="Мягкая отмостка"
-                  />
-                </div>
-                <div className="projects__slide__text">
-                  <p className="projects__slide__text--title">
-                    Мягкая отмостка
-                  </p>
-                  <p className="projects__slide__text--description">
-                    МО, Химки
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="projects__slide">
-              <div className="projects__slide__wrapper">
-                <div className="projects__slide--image">
-                  <Image
-                    width={417}
-                    height={436}
-                    src="/images/image_24.webp"
-                    alt="Мягкая отмостка"
-                  />
-                </div>
-                <div className="projects__slide__text">
-                  <p className="projects__slide__text--title">
-                    Мягкая отмостка
-                  </p>
-                  <p className="projects__slide__text--description">
-                    МО, Подольск
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="projects__slide">
-              <div className="projects__slide__wrapper">
-                <div className="projects__slide--image">
-                  <Image
-                    width={417}
-                    height={436}
-                    src="/images/image_25.webp"
-                    alt="Мягкая отмостка + ливневая канализация + дренаж"
-                  />
-                </div>
-
-                <div className="projects__slide__text">
-                  <p className="projects__slide__text--title">
-                    Мягкая отмостка + ливневая канализация + дренаж
-                  </p>
-                  <p className="projects__slide__text--description">
-                    КП, Юрьево парк
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="projects__slide">
-              <div className="projects__slide__wrapper">
-                <div className="projects__slide--image">
-                  <Image
-                    width={417}
-                    height={436}
-                    src="/images/image_26.webp"
-                    alt="Бетонная отмостка"
-                  />
-                </div>
-
-                <div className="projects__slide__text">
-                  <p className="projects__slide__text--title">
-                    Бетонная отмостка
-                  </p>
-                  <p className="projects__slide__text--description">
-                    МО, Наро-Фоминск
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="projects__slide">
-              <div className="projects__slide__wrapper">
-                <div className="projects__slide--image">
-                  <Image
-                    width={417}
-                    height={436}
-                    src="/images/image_27.webp"
-                    alt="Бетонная отмостка + дренажная система"
-                  />
-                </div>
-
-                <div className="projects__slide__text">
-                  <p className="projects__slide__text--title">
-                    Бетонная отмостка + дренажная система
-                  </p>
-                  <p className="projects__slide__text--description">
-                    МО, Павлово КП «лес и река»
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="projects__slide">
-              <div className="projects__slide__wrapper">
-                <div className="projects__slide--image">
-                  <Image
-                    width={417}
-                    height={436}
-                    src="/images/image_29.webp"
-                    alt="Дренажная система"
-                  />
-                </div>
-
-                <div className="projects__slide__text">
-                  <p className="projects__slide__text--title">
-                    Дренажная система
-                  </p>
-                  <p className="projects__slide__text--description">
-                    МО, Хотьково
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
+                    <div className="projects__slide__text">
+                      <p className="projects__slide__text--title">{e.title}</p>
+                      <p className="projects__slide__text--description">
+                        {e.pos}
+                      </p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
         </div>
       </div>

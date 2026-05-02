@@ -8,10 +8,10 @@ import Projects from "@components/Projects";
 import Drainage from "@components/Drainage";
 import Certificats from "@components/Certificats";
 import Cta from "@components/Cta";
-import OptimizedVideo from "@components/OptimizedVideo";
 import Quiz from "@/components/Quiz/Quiz";
 import { homePageMeta } from "./head";
 import Reviews from "@/components/Reviews";
+import FreeGoBlock from "@/components/FreeGoBlock";
 
 export const metadata: Metadata = {
   title: homePageMeta.title,
@@ -421,6 +421,7 @@ export default function DrainagePage() {
           </div>
         </div>
       </div>
+      <FreeGoBlock />
       <div className="container drainage-deal full-bleed">
         <div className="drainage-deal--dec">
           <Image

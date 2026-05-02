@@ -12,16 +12,15 @@
 
   &__wrapper {
     position: relative;
-
+    overflow: hidden;
     &::after {
       content: "";
       position: absolute;
       bottom: 0;
-      left: 66px;
-
-      width: 40vw;
-      max-width: 635px;
-      aspect-ratio: 635 / 731;
+      left: -90px;
+      width: 45vw;
+      max-width: 802px;
+      aspect-ratio: 808 / 599;
 
       background-image: url("/images/drainage-hero.webp");
       background-size: contain;
@@ -35,7 +34,6 @@
         background-image: url("/images/drainage-hero--2.webp");
         width: 25vw;
         left: 20px;
-        min-width: 500px;
         max-width: 500px;
       }
     }
@@ -105,14 +103,14 @@
 @media (max-width: 768px) {
   .drainage {
     padding: 46px 16px;
-    padding-bottom: 360px;
+    padding-bottom: 350px;
     margin-top: 30px;
 
     &__wrapper {
       padding: 0 20px;
 
       &::after {
-        width: 77vw;
+        width: 90vw;
         left: 50%;
         transform: translateX(-50%);
       }

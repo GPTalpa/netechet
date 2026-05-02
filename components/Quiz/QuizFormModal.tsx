@@ -1,5 +1,6 @@
 "use client";
 
+import { getTrackingParams } from "@/utils/utm";
 import PhoneField from "../PhoneInput/PhoneInput";
 import "./style.scss";
 import { useState } from "react";
@@ -17,6 +18,7 @@ type Props = {
   quizAnswers?: QuizData;
   textBtn?: string;
   textPlaceholder?: string;
+  stockState?: string | null | undefined;
 };
 
 export default function QuizFormModal({
@@ -25,6 +27,7 @@ export default function QuizFormModal({
   quizAnswers,
   textBtn,
   textPlaceholder,
+  stockState,
 }: Props) {
   const [phone, setPhone] = useState("");
   const [name, setName] = useState("");
@@ -35,6 +38,7 @@ export default function QuizFormModal({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+        const trackingData = getTrackingParams();
 
     await fetch("/send.php", {
       method: "POST",
@@ -48,17 +52,19 @@ export default function QuizFormModal({
           phone,
           customValue,
         },
+        stockState: stockState,
+        tracking: trackingData,
       }),
     });
 
     onClose();
-    alert("Заявка отправлена!");
+    window.location.href = "/thank-you/";
   };
 
   return (
     <div className="quiz-modal">
       <div className="quiz-modal__content">
-        <h3>Свяжемся с Вами в течении 24 часов</h3>
+        <h3>Свяжемся с Вами в течении 5 минут</h3>
 
         <form onSubmit={handleSubmit}>
           <PhoneField value={phone} onChange={setPhone} />

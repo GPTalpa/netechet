@@ -3,9 +3,11 @@
 import { useEffect, useState } from "react";
 import QuizPopup from "../Quiz/QuizPopup";
 import QuizFormModal from "../Quiz/QuizFormModal";
+import FreeGo from "./FreeGo";
 
 export default function PopupLayer() {
   const [type, setType] = useState<"quiz" | "faq" | "popup" | null>(null);
+  const [stockState, setStockState] = useState<string | null | undefined>(null);
 
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
@@ -13,6 +15,13 @@ export default function PopupLayer() {
 
       // Ищем ближайший элемент с data-popup
       const popupTrigger = target.closest<HTMLElement>("[data-popup]");
+      const stockTrigger = target.closest<HTMLElement>("[data-stock]");
+      console.log();
+
+      if (stockTrigger) {
+        const stock = stockTrigger.dataset.stock;
+        setStockState(stock);
+      }
 
       if (popupTrigger) {
         const popupType = popupTrigger.dataset.popup as
@@ -38,7 +47,9 @@ export default function PopupLayer() {
 
   return (
     <>
-      {type === "quiz" && <QuizPopup isOpen={true} onClose={close} />}
+      {type === "quiz" && (
+        <QuizPopup isOpen={true} onClose={close} stockState={stockState} />
+      )}
 
       {type === "faq" && (
         <div className="form__modal">

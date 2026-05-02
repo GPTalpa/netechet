@@ -24,6 +24,8 @@ $input = json_decode(file_get_contents("php://input"), true);
 
 $contact    = $input["contact"] ?? [];
 $quiz       = $input["quiz"] ?? [];
+$stockState = $input["stockState"] ?? null;
+$tracking   = $input["tracking"] ?? [];
 
 $name       = $contact["name"] ?? "-";
 $phone      = $contact["phone"] ?? "-";
@@ -41,6 +43,97 @@ $lvlWaterID    = 1310367;
 $serviceID     = 1310369;
 $termID        = 1310371;
 $customValueID = 1310363;
+$stockStateID  = 1401109;
+
+function getTrackingValue($tracking, $key, $default = '-')
+{
+    return isset($tracking[$key]) && !empty($tracking[$key]) ? $tracking[$key] : $default;
+}
+
+$trackingFields = [
+    // UTM
+    'utm_source' => 1285863,
+    'utm_medium' => 1285859,
+    'utm_campaign' => 1285861,
+    'utm_term' => 1285865,
+    'utm_content' => 1285857,
+    'utm_referrer' => 1285867,
+
+    // OpenStat
+    'openstat_service' => 1285873,
+    'openstat_campaign' => 1285875,
+    'openstat_ad' => 1285877,
+    'openstat_source' => 1285879,
+
+    // Коллтрекинг
+    'roistat' => 1285869,
+    'gclientid' => 1285883,
+    '_ym_uid' => 1285885,
+    '_ym_counter' => 1285887,
+
+    // ID кликов
+    'gclid' => 1285889,
+    'yclid' => 1285891,
+    'fbclid' => 1285893,
+
+    // Рефереры
+    'referrer' => 1285871,
+    'from' => 1285881,
+];
+
+
+function formatStockState($state)
+{
+    switch ($state) {
+        case 'neighbor':
+            return 'Приведи соседа';
+        case 'family':
+            return 'Многодетная семья';
+        case 'veteran':
+            return 'Участник ВОВ или СВО';
+        default:
+            return '-';
+    }
+}
+
+$customFields = [
+    [
+        "field_id" => $customValueID,
+        "values" => [["value" => $customValue]]
+    ],
+    [
+        "field_id" => $foundationID,
+        "values" => [["value" => $foundation]]
+    ],
+    [
+        "field_id" => $lvlWaterID,
+        "values" => [["value" => $lvlWater]]
+    ],
+    [
+        "field_id" => $serviceID,
+        "values" => [["value" => $service]]
+    ],
+    [
+        "field_id" => $termID,
+        "values" => [["value" => $term]]
+    ],
+    [
+        "field_id" => $stockStateID,
+        "values" => [["value" => $stockStateText]]
+    ]
+];
+
+foreach ($trackingFields as $paramName => $fieldId) {
+    $value = getTrackingValue($tracking, $paramName);
+    if ($value !== '-') {
+        $customFields[] = [
+            "field_id" => $fieldId,
+            "values" => [["value" => $value]]
+        ];
+    }
+}
+
+$stockStateText = formatStockState($stockState);
 
 logToFile("INPUT: " . file_get_contents("php://input"));
 
@@ -54,38 +147,7 @@ try {
         [
             "name" => "Заявка от $name",
             "price" => 0,
-            "custom_fields_values" => [
-                [
-                    "field_id" => $customValueID,
-                    "values" => [
-                        ["value" => $customValue]
-                    ]
-                ],
-                [
-                    "field_id" => $foundationID,
-                    "values" => [
-                        ["value" => $foundation]
-                    ]
-                ],
-                [
-                    "field_id" => $lvlWaterID,
-                    "values" => [
-                        ["value" => $lvlWater]
-                    ]
-                ],
-                [
-                    "field_id" => $serviceID,
-                    "values" => [
-                        ["value" => $service]
-                    ]
-                ],
-                [
-                    "field_id" => $termID,
-                    "values" => [
-                        ["value" => $term]
-                    ]
-                ]
-            ],
+            "custom_fields_values" => $customFields,
             "_embedded" => [
                 "contacts" => [
                     [
@@ -152,6 +214,10 @@ $message = "
 Услуга: $service
 Когда готовы: $term
 ";
+
+if ($stockState) {
+    $message .= "\n🎁 Акция: $stockStateText";
+}
 
 file_get_contents("https://api.telegram.org/bot{$token}/sendMessage?" . http_build_query([
     "chat_id" => $chat_id,

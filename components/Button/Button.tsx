@@ -8,6 +8,7 @@ interface IButton {
   isServices?: boolean;
   isQuiz?: boolean;
   data?: string;
+  stock?: string;
   onClick?: () => void;
 }
 
@@ -17,12 +18,14 @@ export default function Button({
   isHeader,
   isServices,
   data = "quiz",
+  stock,
   onClick,
 }: IButton) {
   return (
     <button
       className={`btn ${isBlack ? "btn--black" : ""} ${isHeader ? "btn--header" : ""} ${isServices ? "btn--services" : ""}`}
       data-popup={data}
+      data-stock={stock}
       onClick={onClick}
     >
       {text}

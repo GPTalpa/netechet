@@ -1,7 +1,9 @@
 export const dynamic = "force-static";
+import CallMetrika from "@/components/CallMetrika/CallMetrika";
 import { balkara, manrope } from "./fonts";
 import Providers from "./provider";
 import YandexMetrika from "@/components/YandexMetrika/YandexMetrika";
+import UTMMetrics from "@/components/UTMMetrics/UTMMetrics";
 export default function RootLayout({
   children,
 }: {
@@ -32,10 +34,13 @@ export default function RootLayout({
           type="font/ttf"
           crossOrigin="anonymous"
         />
+        <script async src="https://af.click.ru/af.js?id=21369"></script>
       </head>
       <body>
         <Providers>{children}</Providers>
         <YandexMetrika />
+        <CallMetrika />
+        <UTMMetrics />
       </body>
     </html>
   );

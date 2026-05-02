@@ -43,7 +43,13 @@ function reducer(state: State, action: Action): State {
   }
 }
 
-export default function Quiz({ type }: { type: "modal" | "page" }) {
+export default function Quiz({
+  type,
+  stockState,
+}: {
+  type: "modal" | "page";
+  stockState?: string | null | undefined;
+}) {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [customValue, setCustomValue] = useState("");
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -161,6 +167,7 @@ export default function Quiz({ type }: { type: "modal" | "page" }) {
           isOpen={isFormOpen}
           onClose={() => setIsFormOpen(false)}
           quizAnswers={state.answers}
+          stockState={stockState}
         />
       )}
     </div>

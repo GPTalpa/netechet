@@ -1,0 +1,97 @@
+.freego-block {
+  display: flex;
+  border-radius: 40px;
+  overflow: hidden;
+  background: #ede7d9;
+  margin-top: 120px;
+  padding-right: 50px;
+  gap: clamp(20px, 5vw, 100px);
+
+  &__image {
+    img {
+      height: 100%;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 551px;
+
+    h2 {
+      color: #0a0a0a;
+      font-size: 36px;
+      line-height: 114%;
+      margin-bottom: 18px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 20px;
+      margin-bottom: 26px;
+      color: #0a0a0a;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      input,
+      .PhoneInput {
+        border-radius: 15.34px;
+      }
+
+      .btn {
+        background: #8f212d;
+        color: white;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .freego-block {
+    flex-direction: column-reverse;
+    padding-right: 0;
+    margin-top: 46px;
+    border-radius: 20px;
+
+    &--wrapper {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    &__content {
+      padding-top: 46px;
+      h2 {
+        font-size: 26px;
+        line-height: 100%;
+        margin-bottom: 14px;
+      }
+
+      p {
+        font-size: 15px;
+        width: 95%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+      }
+
+      form {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+
+    &__image {
+      img {
+        width: 100%;
+        vertical-align: bottom;
+      }
+    }
+  }
+}

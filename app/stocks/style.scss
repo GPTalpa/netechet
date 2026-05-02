@@ -1,0 +1,70 @@
+@use "../globals.scss" as *;
+
+.stocks-page {
+  margin-top: 46px;
+
+  h1 {
+    margin-bottom: 46px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: clamp(20px, 5vw, 120px);
+
+    img {
+      pointer-events: none;
+    }
+
+    &__block {
+      display: flex;
+      flex-direction: column;
+      gap: 46px;
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      h3 {
+        font-size: 36px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .stocks-page {
+    h1 {
+      font-size: 48px;
+    }
+    padding-left: 20px;
+    padding-right: 20px;
+    &__item {
+      flex-direction: column;
+
+      picture {
+        width: 100%;
+        max-width: 335px;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      &__text {
+        h3 {
+          font-size: 26px;
+        }
+      }
+    }
+  }
+}

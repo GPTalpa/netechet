@@ -41,7 +41,7 @@ export default function Footer() {
                   <li>
                     <Link
                       href="/about"
-                      className={pathname === "/about" ? "active" : ""}
+                      className={pathname === "/about/" ? "active" : ""}
                     >
                       О компании
                     </Link>
@@ -50,17 +50,25 @@ export default function Footer() {
                     <Link
                       href="/drainage"
                       style={{ color: "rgba(225, 208, 168, 1)" }}
-                      className={pathname === "/drainage" ? "active" : ""}
+                      className={pathname === "/drainage/" ? "active" : ""}
                     >
                       Дренажная система
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="/contacts"
-                      className={pathname === "/contacts" ? "active" : ""}
+                      href="/contacts/"
+                      className={pathname === "/contacts/" ? "active" : ""}
                     >
                       Контакты
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/stocks/"
+                      className={pathname === "/stocks/" ? "active" : ""}
+                    >
+                      Акции
                     </Link>
                   </li>
                 </ul>

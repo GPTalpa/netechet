@@ -4,11 +4,12 @@ import { createPortal } from "react-dom";
 type Props = {
   isOpen: boolean;
   onClose: () => void;
+  stockState?: string | null | undefined;
 };
 
 import Quiz from "./Quiz";
 import "./style.scss";
-export default function QuizPopup({ isOpen, onClose }: Props) {
+export default function QuizPopup({ isOpen, onClose, stockState }: Props) {
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -38,7 +39,7 @@ export default function QuizPopup({ isOpen, onClose }: Props) {
               </span>
               <br /> и свяжемся с вами
             </h3>
-            <Quiz type="modal" />
+            <Quiz type="modal" stockState={stockState} />
             <button className="modal-close" onClick={onClose}>
               ×
             </button>

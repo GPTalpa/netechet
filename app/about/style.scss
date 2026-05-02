@@ -104,6 +104,10 @@
     justify-content: space-between;
     flex: 1;
 
+    @media (max-width: 1600px) {
+      padding-right: 100px;
+    }
+
     h2 {
       color: rgba(255, 255, 255, 1);
       font-size: 22px;
@@ -134,6 +138,13 @@
     position: absolute;
     left: 100%;
     transform: translateX(-100%);
+  }
+
+  @media (max-width: 1440px) {
+    &--dec {
+      width: 120px;
+      height: auto;
+    }
   }
 
   &__info-item {

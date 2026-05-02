@@ -1,0 +1,172 @@
+.stocks {
+  margin-top: 120px;
+  position: relative;
+  &__slide {
+    text-align: center;
+
+    &__wrapper {
+      position: relative;
+    }
+
+    &__text {
+      position: absolute;
+      left: 96px;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 36px;
+
+      &--right {
+        left: auto;
+        right: 79px;
+        align-items: flex-start;
+
+        .stocks__slide__text--title {
+          text-align: left;
+        }
+      }
+
+      &--title {
+        font-size: 26px;
+        text-align: left;
+
+        &--main {
+          font-size: 96px;
+          font-family: var(--font-balkara);
+        }
+
+        &--neighbor {
+          font-size: 20px;
+          text-align: left;
+          margin-bottom: 15px;
+        }
+      }
+      &--2 {
+        gap: 5px;
+      }
+
+      &--neighbor {
+        font-family: var(--font-balkara);
+        background: linear-gradient(180deg, #912531 0%, #5b272d 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 46px;
+      }
+
+      &--neighbor-cost {
+        font-family: var(--font-balkara);
+        font-size: 120px;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 1440px;
+    }
+  }
+
+  &__btns--slider {
+    .slider__arrow {
+      background: none;
+      position: absolute;
+      top: 50%;
+      z-index: 50;
+      &--prev {
+        left: 0;
+        transform: translateY(-50%) translateX(-50%);
+      }
+      &--next {
+        right: 0;
+        transform: translateY(-50%) translateX(50%);
+      }
+    }
+  }
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .stocks {
+    padding: 0 20px;
+
+    &__slide {
+      text-align: center;
+
+      &__wrapper {
+        position: relative;
+      }
+
+      &__text {
+        left: 32px;
+        right: 32px;
+        top: auto;
+        bottom: 16px;
+        align-items: center;
+        gap: 18px;
+
+        &--title {
+          font-size: 16px;
+          text-align: center;
+
+          &--main {
+            font-size: 46px;
+            text-align: center;
+          }
+          &--neighbor {
+            text-align: center;
+          }
+        }
+
+        &--right {
+          align-items: center;
+
+          .stocks__slide__text--title {
+            text-align: center;
+          }
+        }
+
+        &--neighbor-cost {
+          font-size: 72px;
+        }
+
+        &--2 {
+          gap: 2px;
+        }
+      }
+    }
+
+    &__btns--slider {
+      display: none;
+    }
+  }
+
+  .mobile-only {
+    display: flex;
+    width: fit-content;
+    gap: 4px;
+    margin: 0 auto;
+  }
+
+  .custom-pagination {
+    text-align: center;
+    background: transparent;
+
+    .pagination-dot {
+      width: 17px;
+      height: 17px;
+      background: #ede7d9;
+      border-radius: 50%;
+
+      &.active {
+        background: #8f212d;
+      }
+    }
+  }
+}

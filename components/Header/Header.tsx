@@ -45,7 +45,7 @@ export default function Header() {
             </li>
             <li>
               <Link
-                href="/about"
+                href="/about/"
                 className={pathname === "/about/" ? "active" : ""}
                 onClick={onHideMenu}
               >
@@ -54,7 +54,7 @@ export default function Header() {
             </li>
             <li>
               <Link
-                href="/drainage"
+                href="/drainage/"
                 style={{ color: "rgba(225, 208, 168, 1)" }}
                 className={pathname === "/drainage/" ? "active" : ""}
                 onClick={onHideMenu}
@@ -64,11 +64,20 @@ export default function Header() {
             </li>
             <li>
               <Link
-                href="/contacts"
+                href="/contacts/"
                 className={pathname === "/contacts/" ? "active" : ""}
                 onClick={onHideMenu}
               >
                 Контакты
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/stocks/"
+                className={pathname === "/stocks/" ? "active" : ""}
+                onClick={onHideMenu}
+              >
+                Акции
               </Link>
             </li>
           </ul>
