@@ -9,6 +9,17 @@
     justify-content: space-between;
     gap: 140px;
 
+    &--description {
+      // overflow-x: scroll;
+      max-width: 550px;
+      gap: 15px;
+      display: flex;
+
+      video {
+        height: 100%;
+      }
+    }
+
     h2 {
       color: rgba(255, 255, 255, 1);
       font-size: 66px;
@@ -24,10 +35,14 @@
   }
 
   video {
-    height: auto;
+    height: 450px;
     border-radius: 20px;
     max-width: 404px;
   }
+}
+
+.video--block {
+  // width: 200px;
 }
 
 @media (max-width: 768px) {

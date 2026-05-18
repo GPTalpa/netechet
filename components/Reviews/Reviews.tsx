@@ -11,6 +11,7 @@ export default function Reviews() {
           О нас говорят <br></br>клиенты
         </h2>
         <div className="drainage-reviews__text--description">
+          <OptimizedVideo videoName="review2" />
           <OptimizedVideo videoName="review1" />
         </div>
       </div>

@@ -96,6 +96,8 @@ function formatStockState($state)
     }
 }
 
+$stockStateText = formatStockState($stockState);
+
 $customFields = [
     [
         "field_id" => $customValueID,
@@ -133,7 +135,6 @@ foreach ($trackingFields as $paramName => $fieldId) {
     }
 }
 
-$stockStateText = formatStockState($stockState);
 
 logToFile("INPUT: " . file_get_contents("php://input"));
 

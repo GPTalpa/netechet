@@ -37,6 +37,7 @@ export default function FreeGo() {
         contact: {
           name,
           phone,
+          customValue,
         },
         tracking: trackingData,
       }),
