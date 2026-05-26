@@ -679,7 +679,7 @@ export default function DrainagePage() {
                   Принимаем заявку и передаём<br></br> её менеджеру
                 </p>
               </div>
-              <Button text="Оставить заявку" isBlack={false} />
+              <Button text="Оставить заявку" isBlack={false} data="faq"/>
             </div>
           </div>
           <div className="drainage-how-we-work__wrapper-blocks">

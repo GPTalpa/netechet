@@ -14,7 +14,7 @@ export default function Cta() {
             Наш менеджер свяжется с Вами для уточнения
             <br /> даты и времени выезда инженера на участок!
           </p>
-          <Button text="Оставить заявку на выезд" isBlack={false} />
+          <Button text="Оставить заявку на выезд" isBlack={false} data="faq"/>
         </div>
       </div>
     </div>

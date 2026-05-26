@@ -79,6 +79,7 @@ export default function Services() {
                 text={"Оставить заявку"}
                 isBlack={false}
                 isServices={true}
+                data="faq"
               />
             </div>
           </div>
@@ -118,6 +119,7 @@ export default function Services() {
                 text={"Оставить заявку"}
                 isBlack={false}
                 isServices={true}
+                data="faq"
               />
             </div>
           </div>

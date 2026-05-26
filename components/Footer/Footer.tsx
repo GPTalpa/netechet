@@ -112,7 +112,7 @@ export default function Footer() {
               <time dateTime="19:00+03:00">19:00</time> МСК
             </p>
           </address>
-          <Button text="обратный звонок" isBlack={false} />
+          <Button text="обратный звонок" isBlack={false} data="faq" />
           <address className="footer__telegram">
             <Link href="https://t.me/netechetmsk/" target="_blank">
               <Image

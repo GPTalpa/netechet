@@ -210,6 +210,43 @@ export default function About() {
           </div>
         </div>
       </div>
+      <div className="container about-command">
+        <h2>Наша команда</h2>
+        <div className="about-command__content">
+          <div className="about-command__item">
+            <div className="about-command__item--image">
+              <Image
+                src="/images/IMG_5315.webp"
+                alt="Старший бригадир компании 'Не течет'"
+                width={458}
+                height={814}
+              />
+            </div>
+            <div className="about-command__item__text">
+              <p className="about-command__item--title">Дмитрий Борискин</p>
+              <p className="about-command__item--description">
+                <em>Старший бригадир</em>
+              </p>
+            </div>
+          </div>
+          <div className="about-command__item">
+            <div className="about-command__item--image">
+              <Image
+                src="/images/IMG_5314.webp"
+                alt="Бригадир компании 'Не течет'"
+                width={458}
+                height={814}
+              />
+            </div>
+            <div className="about-command__item__text">
+              <p className="about-command__item--title">Сергей Николаев</p>
+              <p className="about-command__item--description">
+                <em>Бригадир</em>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="container about-info">
         <div className="about-info__item about-info__item--accent">
           <p className="about-info__item--title">
