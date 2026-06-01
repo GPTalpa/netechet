@@ -7,6 +7,36 @@ export type casesType = {
 export const cases: casesType[] = [
   {
     title: "Дренажная система",
+    pos: "МО, Ступино",
+    image: "case112.webp",
+  },
+  {
+    title: "Дренажная система",
+    pos: "МО, КП Зеленые дали",
+    image: "case115.webp",
+  },
+  {
+    title: "Дренажная система",
+    pos: "Москва, Коммунарка",
+    image: "case116.webp",
+  },
+  {
+    title: "Дренажная система",
+    pos: "Москва, Одинцово",
+    image: "case117.webp",
+  },
+  {
+    title: "Въездная группа",
+    pos: "МО, Руза",
+    image: "case113.webp",
+  },
+  {
+    title: "Въездная группа",
+    pos: "МО, Руза",
+    image: "case114.webp",
+  },
+  {
+    title: "Дренажная система",
     pos: "МО, КП Новахово",
     image: "case0.webp",
   },
@@ -24,6 +54,11 @@ export const cases: casesType[] = [
     title: "Дренажная система",
     pos: "МО, Жостово",
     image: "case3.webp",
+  },
+    {
+    title: "Дренажная система",
+    pos: "МО, Электросталь",
+    image: "case111.webp",
   },
   {
     title: "Дренажная система",
