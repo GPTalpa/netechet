@@ -66,7 +66,15 @@ export default function Quiz({
 
   const current = quizDataCurrent[state.step];
 
+  const isAnswerSelected = () => {
+    const currentAnswer = state.answers[current.key];
+    return currentAnswer && currentAnswer.trim() !== "";
+  };
+
   const handleNext = async () => {
+    if (!isAnswerSelected()) {
+      return;
+    }
     if (state.step < quizDataCurrent.length - 1) {
       dispatch({ type: "NEXT" });
     } else {
@@ -156,6 +164,7 @@ export default function Quiz({
             <button
               className="drainage-quiz__btns--continue"
               onClick={handleNext}
+              disabled={!isAnswerSelected()}
             >
               далее
             </button>

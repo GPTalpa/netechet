@@ -55,7 +55,7 @@ export const cases: casesType[] = [
     pos: "МО, Жостово",
     image: "case3.webp",
   },
-    {
+  {
     title: "Дренажная система",
     pos: "МО, Электросталь",
     image: "case111.webp",
@@ -79,6 +79,11 @@ export const cases: casesType[] = [
     title: "Дренажная система",
     pos: "МО, Мытищи",
     image: "case7.webp",
+  },
+  {
+    title: "Мягкая въездная группа",
+    pos: "МО, Мытищи",
+    image: "case1121.webp",
   },
   {
     title: "Дренажная система",

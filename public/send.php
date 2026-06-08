@@ -38,9 +38,9 @@ $term       = $quiz["term"] ?? "-";
 
 // ID кастомных полей
 $phoneFieldID  = 1285849;
-$foundationID  = 1310365;
+$foundationID  = 1490733;
 $lvlWaterID    = 1310367;
-$serviceID     = 1310369;
+$serviceID     = 1490735;
 $termID        = 1310371;
 $customValueID = 1310363;
 $stockStateID  = 1401109;
@@ -210,10 +210,9 @@ $message = "
 📞 Телефон: $phone
 💬 Сообщение: $customValue
 
-Тип фундамента: $foundation
-Уровень грунтовых вод: $lvlWater
-Услуга: $service
-Когда готовы: $term
+Тип участка: $foundation
+Сколько метров дренажа нужно: $service
+В течении какого времени планируется установка: $term
 ";
 
 if ($stockState) {

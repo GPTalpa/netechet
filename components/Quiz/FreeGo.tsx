@@ -13,15 +13,15 @@ export default function FreeGo() {
   const [customValue, setCustomValue] = useState("");
   const [showOffer, setShowOffer] = useState(false);
 
-  useEffect(() => {
-    // Устанавливаем таймер на 30 секунд
-    const timer = setTimeout(() => {
-      setShowOffer(true);
-    }, 30000); // 30 000 мс
+  // useEffect(() => {
+  //   // Устанавливаем таймер на 30 секунд
+  //   const timer = setTimeout(() => {
+  //     setShowOffer(true);
+  //   }, 30000); // 30 000 мс
 
-    // Очищаем таймер при размонтировании компонента
-    return () => clearTimeout(timer);
-  }, []);
+  //   // Очищаем таймер при размонтировании компонента
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   if (!showOffer) return null;
 

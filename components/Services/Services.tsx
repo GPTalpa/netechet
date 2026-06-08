@@ -30,7 +30,7 @@ export default function Services() {
             </div>
             <div className="services__item__price">
               <p>стоимость</p>
-              <p className="price">от 1500₽ за МП</p>
+              <p className="price">от 1000₽ за МП</p>
             </div>
             <div className="services__item__btns">
               <Button

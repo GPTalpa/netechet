@@ -245,6 +245,22 @@ export default function About() {
               </p>
             </div>
           </div>
+          <div className="about-command__item">
+            <div className="about-command__item--image">
+              <Image
+                src="/images/IMG_5316.webp"
+                alt="Выездной инженер компании 'Не течет'"
+                width={458}
+                height={814}
+              />
+            </div>
+            <div className="about-command__item__text">
+              <p className="about-command__item--title">Артём Фалькевич</p>
+              <p className="about-command__item--description">
+                <em>Выездной инженер</em>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       <div className="container about-info">

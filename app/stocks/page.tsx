@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 };
 
 export default function StocksPage() {
-  <StocksJsonLd/>;
+  <StocksJsonLd />;
   return (
     <div className="container stocks-page">
       <h1>Акции</h1>
@@ -81,6 +81,7 @@ export default function StocksPage() {
                 <Button
                   text="Воспользоваться акцией"
                   isBlack={false}
+                  data="faq"
                   stock={stock.type}
                 />
               </div>

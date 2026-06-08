@@ -2,15 +2,13 @@ export const dynamic = "force-static";
 
 import "./home.scss";
 import { Metadata } from "next";
-import Image from "next/image";
-import Button from "@components/Button";
 import Projects from "@components/Projects";
 import Drainage from "@components/Drainage";
 import { homePageMeta } from "./head";
 import Reviews from "@/components/Reviews";
-import Link from "next/link";
 import Services from "@/components/Services";
 import Stocks from "@/components/Stocks";
+import FreeGoBlock from "@/components/FreeGoBlock/FreeGoBlock";
 
 export const metadata: Metadata = {
   title: homePageMeta.title,
@@ -198,6 +196,7 @@ export default function HomePage() {
       <Drainage />
       <Stocks />
       <Projects />
+      <FreeGoBlock />
       <Services />
       <Reviews />
     </div>

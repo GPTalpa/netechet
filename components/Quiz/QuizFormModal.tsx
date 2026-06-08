@@ -38,7 +38,7 @@ export default function QuizFormModal({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-        const trackingData = getTrackingParams();
+    const trackingData = getTrackingParams();
 
     await fetch("/send.php", {
       method: "POST",
@@ -76,7 +76,7 @@ export default function QuizFormModal({
             onChange={(e) => setName(e.target.value)}
             required
           />{" "}
-          <input
+          {/* <input
             type="text"
             placeholder={
               textPlaceholder ? textPlaceholder : "Свой ответ (напишите)"
@@ -86,18 +86,18 @@ export default function QuizFormModal({
             onChange={(e) => {
               setCustomValue(e.target.value);
             }}
-          />
+          /> */}
           <div className="consent">
             <input
               type="checkbox"
               checked={consent}
               onChange={(e) => setConsent(e.target.checked)}
               className="consent__input"
-              id="consentCheckbox"
+              id="consentCheckbox1"
               required
             />
 
-            <label htmlFor="consentCheckbox" className="consent__label">
+            <label htmlFor="consentCheckbox1" className="consent__label">
               <span className="consent__box">
                 {consent && (
                   <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
